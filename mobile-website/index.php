@@ -1,4 +1,20 @@
 <!doctype html>
+
+<?php
+$servername = "heroku_ca79ab026f8fabd";
+$username = "b481f533eab2cc";
+$password = "fef9929b";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+echo "Connected successfully";
+?>
+
 <html>
 <head>
 <meta charset="utf-8">
