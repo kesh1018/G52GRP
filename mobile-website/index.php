@@ -9,7 +9,8 @@ $password = "fef9929b";
 $conn = mysqli_connect($servername, $username, $password);
 
 // Check connection
-if (!$conn) {
+if (!$conn) {\
+	echo"Connection failed";
     die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
