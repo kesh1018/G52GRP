@@ -10,10 +10,21 @@ $db = "heroku_ca79ab026f8fabd";
 
 $conn = new mysqli($server, $username, $password, $db);
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-echo "<p>Connected successfully</p>";
+// Check connection
+if (mysqli_connect_errno())
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+
+// Check if server is alive
+if (mysqli_ping($conn))
+  {
+  echo "Connection is ok!";
+  }
+else
+  {
+  echo "Error: ". mysqli_error($conn);
+  }
 ?>
 
 <html>
