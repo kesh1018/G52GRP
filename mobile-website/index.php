@@ -1,16 +1,16 @@
 <!doctype html>
 
 <?php
-$servername = "heroku_ca79ab026f8fabd";
-$username = "b481f533eab2cc";
-$password = "fef9929b";
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password);
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
-// Check connection
-if (!$conn) {\
-	echo"Connection failed";
+$conn = new mysqli($server, $username, $password, $db);
+
+if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 echo "Connected successfully";
