@@ -35,6 +35,34 @@ else
 <title>Visitor Management System</title>
 </head>
 
+<div id="container">
+</div>
+	<br />
+<div id="menubar">
+	<div class="menu">
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a>
+			<ul class="submenu">
+				<li><a href="#">AAA</a></li>
+				<li><a href="#">BBB</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Services</a>
+			<ul class="submenu">
+				<li><a href="#">XXX</a></li>
+				<li><a href="#">YYY</a></li>
+			</ul>
+			
+		</li>
+		<li><a href="#">Contact</a></li>
+		<li style="padding-right: 23%"><a href="#"></a></li>
+		<li><a href="#" class="in" style="color: black">Log In</a></li>
+	</ul>
+	
+</div>
+</div>
+
 <body>
 <!-- Header content -->
 <header>
