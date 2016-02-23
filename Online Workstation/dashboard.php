@@ -10,15 +10,14 @@
 <link href="css/style.css" rel="stylesheet">
 <title>Visitor Management System</title>
 </head>
-
-<div id="container">
-</div>
+<body>
+<div id="container"></div>
 	<br />
 <div id="menubar">
 	<div class="menu">
 	<ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About</a>
+		<li><a href="index.php">Home</a></li>
+		<li><a href="about.php">About</a>
 			<ul class="submenu">
 				<li><a href="#">AAA</a></li>
 				<li><a href="#">BBB</a></li>
@@ -35,11 +34,9 @@
 		<li style="padding-right: 23%"><a href="#"></a></li>
 		<li><a href="#" class="in" style="color: black">Log In</a></li>
 	</ul>
-	
 </div>
 </div>
 
-<body>
 <!-- Header content -->
 <header>
   <div class="profileLogo"> 
@@ -62,7 +59,6 @@
     <div class="section1Content">
 		<p><span>Name:</span> <?php echo $row1['visitor_name']; ?></p>
 		<p><span>I/C Number:</span> <?php echo $row1['visitor_iumber']; ?></p>
-		<p><span>Etnicity:</span> <?php echo $row1['visitor_etnicity']; ?></p>
 		<p><span>Address:</span> <?php echo $row1['visitor_address']; ?></p>
 	</div>
   </section>
