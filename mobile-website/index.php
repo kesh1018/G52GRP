@@ -37,11 +37,16 @@ body {
 	<body>
 		<div class="container">
 			<header class="clearfix">
-				<span>GROUP 5</span>
+			  <ul class="topnav">
+			    <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <ul class="topnav right">
+    <li><a href="#about">About</a></li>
+    <li><a href="#login">Login</a></li>
+  </ul>
+</ul>
 				<h1>Visitor Management System</h1>
-				<nav>
-                	<a href="put login link here" class="bp-icon bp-icon-archive" data-info="Login"><span>Go to Login Page</span></a>
-                </nav>
 			</header>	
 			<div class="main">
 				 <form class="cbp-mc-form">

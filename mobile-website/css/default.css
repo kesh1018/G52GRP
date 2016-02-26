@@ -28,8 +28,8 @@ a:hover {
 }
 
 .container > header {
-	width: 90%;
-	max-width: 69em;
+	width: 100%;
+	max-width: 200em;
 	margin: 0 auto;
 	padding: 2.875em 1.875em 1.875em;
 }
@@ -167,4 +167,31 @@ a:hover {
 		text-indent: 30px;
 	}
 	
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav ul.right {
+    float: right;
+    list-style-type: none;
 }
