@@ -1,5 +1,5 @@
  $("#login-button").click(function(event){
 
- 	$('form').fadeOut("slow");
+ 	$('form').hide();
 	$('.wrapper').addClass('form-success');
 });
