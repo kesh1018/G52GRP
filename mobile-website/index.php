@@ -47,7 +47,6 @@ body {
   </ul>
 </ul>
 				<h1>Visitor Management System</h1>
-			</header>	
 			<div class="main">
 				 <form class="cbp-mc-form">
  				 <div class="cbp-mc-column">
@@ -55,15 +54,15 @@ body {
 				 <img src="images/default-picture.jpg" alt="id picture" width="290"></div>
 					<div class="cbp-mc-column">
 					  <label for="first-name">Full Name</label>
-	  					<input type="text" id="full-name" name="full-name">
+	  					<input type="text" id="full-name" name="full-name" placeholder="should get info from server">
 	  					<label for="ic-num">I/C Number</label>
-	  					<input type="text" id="ic-num" name="ic-num">
+	  					<input type="text" id="ic-num" name="ic-num" placeholder="should get info from server">
   	  					<label for="race">Race</label>
-	  					<input type="text" id="race" name="race">
+	  					<input type="text" id="race" name="race"placeholder="should get info from server">
                         <label for="address">Address</label>
-	  					<textarea id="address" name="address"></textarea>
+	  					<textarea id="address" name="address" placeholder="should get info from server"></textarea>
 	  					<label for="phone">Phone Number</label>
-	  					<input type="text" id="phone" name="phone">
+	  					<input type="text" id="phone" name="phone" placeholder="input from user">
 
 	  				</div>
   				  <div class="cbp-mc-column">
