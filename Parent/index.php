@@ -17,12 +17,13 @@
 	<div class="wrapper">
 		<div class="container">
 			<h1>Visitor Management System Dashboard</h1>
-			<form action="" method="post">
+			<form id="loginform" action="" method="post">
+				<label for="user_email"></label>
 				<input type="email" placeholder="Email address" id="user_email" name="user_email">
 				<input type="password" placeholder="Password" id="user_password" name="user_password">
 				<input name="submit" type="submit" id="login-button">
 				<br>
-				<span><?php echo $error; ?></span>
+				<?php echo $error ?>
 			</form>
 		</div>
 		
@@ -41,6 +42,24 @@
 	</div>
 
 	<script src='js/jquery-2.2.1.min.js'></script>
-	<script src='js/index.js'></script>
+	 <script src='js/index.js'></script> 
+	<script src='js/jquery.validate.js'></script>
+
+	<script>
+	$("#loginform").validate({
+
+		rules: {
+		user_email: {
+			required: true,
+			email: true
+		},
+		user_password: {
+			required: true
+		}
+	}
+
+	});
+	</script>
+	
 </body>
 </html>
