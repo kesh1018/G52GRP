@@ -21,6 +21,8 @@
 </head>
 <body>
 
+<div id="clockbox"></div>
+
 <div class="wrapper">
     <div class="sidebar" data-color="orange" data-image="assets/img/sidebar-2.jpg">
     	<div class="sidebar-wrapper">
@@ -172,7 +174,6 @@
         </footer>
     </div>
 
-
 </body>
 
     <!--   Core JS Files   -->
@@ -181,5 +182,6 @@
 
     <!--  Notifications Plugin    -->
     <script src="assets/js/bootstrap-notify.js"></script>
-    
+    <script src="assets/js/time.js" type="text/javascript"></script>
+
 </html>
