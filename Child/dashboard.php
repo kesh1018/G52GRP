@@ -34,19 +34,19 @@
 
             <ul class="nav">
                 <li class="active">
-                    <a href="dashboard.html">
+                    <a href="dashboard.php">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
                 <li>
-                    <a href="summary.html">
+                    <a href="summary.php">
                         <i class="pe-7s-note2"></i>
                         <p>Summary</p>
                     </a>
                 </li>
                 <li>
-                    <a data-toggle="collapse" href="#" class="collapsed" aria-expanded="false">
+                    <a data-toggle="collapse" href="visitors.php#visitors-child" class="collapsed" aria-expanded="false">
                         <i class="pe-7s-user"></i>
                         <p>Visitors
                            <b class="caret"></b>
@@ -54,13 +54,13 @@
                     </a>
                     <div class="collapse" id="visitors-child" aria-expanded="false" style="height: 0px;">
                         <ul class="nav">
-                            <li><a href="#">Add</a></li>
-                            <li><a href="#">Edit</a></li>
-                            <li><a href="#">Delete</a></li>
+                            <li><a href="add-visitor.php">Add</a></li>
+                            <li><a href="edit-visitor.php">Edit</a></li>
+                            <li><a href="delete-visitor.php">Delete</a></li>
                         </ul>
                     </div>
                 <li>
-                    <a href="account.html">
+                    <a href="account.php">
                         <i class="pe-7s-id"></i>
                         <p>Account</p>
                     </a>
