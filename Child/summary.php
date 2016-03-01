@@ -18,8 +18,11 @@
     <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css">
     <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
+    
 </head>
 <body>
+
+<div id="clockbox"></div>
 
 <div class="wrapper">
     <div class="sidebar" data-color="orange" data-image="assets/img/sidebar-2.jpg">
@@ -269,5 +272,6 @@
 
     <!--  Notifications Plugin    -->
     <script src="assets/js/bootstrap-notify.js"></script>
-    
+    <script src="assets/js/time.js" type="text/javascript"></script>
+
 </html>
