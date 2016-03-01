@@ -55,9 +55,9 @@
                     </a>
                     <div class="collapse" id="visitors-child" aria-expanded="false" style="height: 0px;">
                         <ul class="nav">
-                            <li><a href="add-visitor.php">Add</a></li>
-                            <li><a href="add-visitor.php">Edit</a></li>
-                            <li><a href="add-visitor.php">Delete</a></li>
+                            <li><a href="add-visitor.php">Add new visitor</a></li>
+                            <li><a href="add-visitor.php">Edit existing visitor</a></li>
+                            <li><a href="add-visitor.php">Delete visitor</a></li>
                         </ul>
                     </div>
                 <li>
