@@ -17,8 +17,8 @@
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       	<ul class="nav navbar-nav">
-	        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-	        <li><a href="summary.php">Summary</a></li>
+	        <li><a href="dashboard.php">Home</a></li>
+	        <li class="active" ><a href="#">Summary <span class="sr-only">(current)</span></a></li>
 	        <li class="dropdown">
 	          <a href="visitor.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visitor <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
@@ -41,7 +41,6 @@
 	    </div>
 		</div>
 	</nav>
-
 	<script src='js/jquery-2.2.1.min.js'></script>
 	<script src='js/bootstrap.min.js'></script>
 </body>
