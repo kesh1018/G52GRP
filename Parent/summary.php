@@ -15,12 +15,12 @@
 			<div class="navbar-header">
 				<a class="navbar-brand">VMS Dashboard</a>
 			</div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse">
       	<ul class="nav navbar-nav">
 	        <li><a href="dashboard.php">Home</a></li>
 	        <li class="active" ><a href="#">Summary <span class="sr-only">(current)</span></a></li>
 	        <li class="dropdown">
-	          <a href="visitor.php" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visitor <span class="caret"></span></a>
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visitor <span class="caret"></span></a>
 	          <ul class="dropdown-menu">
 	            <li><a href="#">Add Visitor</a></li>
 	            <li><a href="#">Edit Visitor</a></li>
@@ -28,7 +28,7 @@
 	          </ul>
 	        </li>
 	      </ul>
-	      <form class="navbar-form navbar-right" role="search">
+	      <form class="navbar-form navbar-left" role="search">
 	        <div class="form-group">
 	          <input type="text" class="form-control" placeholder="Search">
 	        </div>
@@ -36,6 +36,7 @@
 	      </form>
 	      <ul class="nav navbar-nav navbar-right">
 	      	<p class="navbar-text">Signed in as <?php echo $login_session; ?></p>
+	      	<li><a href="settings.php">Settings</a></li>
 	        <li><a href="logout.php">Log out</a></li>
 	      </ul>
 	    </div>
