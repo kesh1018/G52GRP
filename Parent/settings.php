@@ -8,6 +8,8 @@
 	<meta charset="utf-8" />
 	<title>Visitor Management System Dashboard</title>
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<script src='js/jquery-2.2.1.min.js'></script>
+	<script src='js/bootstrap.min.js'></script>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -19,14 +21,7 @@
       	<ul class="nav navbar-nav">
 	        <li><a href="dashboard.php">Home</a></li>
 	        <li><a href="summary.php">Summary</a></li>
-	        <li class="dropdown">
-	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visitor <span class="caret"></span></a>
-	          <ul class="dropdown-menu">
-	            <li><a href="#">Add Visitor</a></li>
-	            <li><a href="#">Edit Visitor</a></li>
-	            <li><a href="#">Delete Visitor</a></li>
-	          </ul>
-	        </li>
+	        <li><a href="visitor.php">Visitor</a></li>
 	      </ul>
 	      <form class="navbar-form navbar-left" role="search">
 	        <div class="form-group">
@@ -51,9 +46,5 @@
   			<a href="" class="alert-link">something</a></div>';
 	}
 	?>
-
-
-	<script src='js/jquery-2.2.1.min.js'></script>
-	<script src='js/bootstrap.min.js'></script>
 </body>
 </html>
