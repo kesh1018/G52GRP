@@ -20,7 +20,7 @@
 			<div class="collapse navbar-collapse">
       	<ul class="nav navbar-nav">
 	        <li><a href="dashboard.php">Home</a></li>
-	        <li ><a href="summary.php">Summary </a></li>
+
 	        <li class="active" ><a href="#">Visitor <span class="sr-only">(current)</span></a></li>
 	      </ul>
 	      <form class="navbar-form navbar-left" role="search">
@@ -54,7 +54,7 @@
 
 				<div class="tab-content">
 					<div class="tab-pane fade in active" id="add">
-						<form role="form">
+						<form role="form" action="add.php">
 							<div class="row" style="margin-top: 20px;">
                                         <div class="col-md-5">
                                             <div class="form-group">

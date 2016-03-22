@@ -17,7 +17,7 @@
 					var dataTable =$('#example').dataTable({
 						"serverSide": true,
 						"processing": true,
-						responsive: true,
+						 responsive: true,
 						"stateSave" : true,
 						"autoWidth": true,
 						"pagingType": "full_numbers",
@@ -37,7 +37,7 @@
 	<div class="collapse navbar-collapse">
       	<ul class="nav navbar-nav navbar-left">
 	        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-	        <li><a href="summary.php">Summary</a></li>
+	       
 	       	<li><a href="visitor.php">Visitor</a></li>
 	      </ul>
 	      <form class="navbar-form navbar-left" role="search">

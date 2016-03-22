@@ -28,6 +28,7 @@ $columns = array(
 
 );
 
+
 // getting total number records without any search
 $sql = "SELECT * FROM visitor_list";
 $query=mysqli_query($conn, $sql) or die("Connection to the Server Failed");
