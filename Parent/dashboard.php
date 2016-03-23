@@ -13,7 +13,7 @@
 	<script type="text/javascript" language="javascript" src='js/bootstrap.min.js'></script>
 	<script type="text/javascript" language="javascript" src='js/jquery.dataTables.js'></script>
 	<script type="text/javascript" language="javascript" src="js/time.js" ></script>
-	<script type="text/javascript" language="javascript">
+			<script type="text/javascript" language="javascript">
 				 $(document).ready(function(){
 					var dataTable =$('#example').dataTable({
 						"serverSide": true,
@@ -31,7 +31,6 @@
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed">
-	<div id="clockbox" align="right"></div>
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand">VMS Dashboard</a>
@@ -49,10 +48,10 @@
 	        <button type="submit" class="btn btn-default">Submit</button>
 	      </form>
 	      <ul class="nav navbar-nav navbar-right">
+	      	<li><div id="clockbox" style="margin-top: 15px;"></div></li>
 	      	<p class="navbar-text">Signed in as <?php echo $login_session; ?></p>
 	      	<li><a href="settings.php">Settings</a></li>
-	        
-	        <!-- Modal -->
+	        	        <!-- Modal -->
 	        <li><div class="modal fade" id="logout" role="dialog">
 				<div class="modal-dialog modal-sm">
 					<div class="modal-content">
@@ -67,15 +66,15 @@
 			</div>
 	        </li>
 
-	        <!-- Trigger the modal with a button -->
-	        <button type="button" style="margin-top: 10px"class="btn btn-info btn-sm" data-toggle="modal" data-target="#logout">Log Out</button>
+	         <!-- Trigger the modal with a button -->
+	        <button type="button" style="margin-top: 10px;margin-left: 5px;"class="btn btn-info btn-sm" data-toggle="modal" data-target="#logout">Log Out</button>
 	      </ul>
 	    </div>
 		</div>
 	</nav>
 	<div class="container-fluid">
 	<div class="row">
-		<div class="col-lg-8" style="margin-left:50px">
+		<div class="col-lg-12" style="">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					Visitor List
@@ -91,8 +90,8 @@
 		                <th>Gender</th>
 		                <th>Race</th>
 		                <th>Religion</th>
-		                <th>Contact No</th>
-		                <th>Vehicle Registration No</th>
+		                <th>Contact Number</th>
+		                <th>Registration Number</th>
 		                <th>Category</th>
 		                <th>Date</th>
 		                <th>Check In Time</th>
@@ -104,12 +103,6 @@
 		   		</table>
 		   		</div>
 			</div>
-		</div>
-		<div class="col-lg-3">
-		<div class="panel panel-default">
-				<div class="panel-heading">
-					
-				</div>
 		</div>
 	</div>
 	</div>

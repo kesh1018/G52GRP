@@ -16,15 +16,22 @@ $requestData= $_REQUEST;
 
 $columns = array( 
 // datatable column index  => database column name
-    0 => 'NAME', 
+    0 => 'name', 
     1 => 'IC_No',
-    2 => 'address',
-    3 => 'gender',
-    4 => 'race',
-    5 => 'category',
-    6 => 'DATE',
-    7 => 'check_in',
-    8 => 'check_out'
+    2 => 'dob',
+    3 => 'address',
+    4 => 'gender',
+    5 => 'race',
+    6 => 'religion',
+    7 => 'contact_no',
+    8 => 'registration_no',
+    9 => 'category',
+    10 => 'date',
+    11 => 'check_in',
+    12 => 'check_out',
+    13 => 'remarks',
+    14 => 'blacklist'
+
 
 );
 
@@ -40,15 +47,21 @@ if( !empty($requestData['search']['value']) ) {
     // if there is a search parameter
     $sql = "SELECT * ";
     $sql.=" FROM visitor_list";
-    $sql.=" WHERE NAME LIKE '".$requestData['search']['value']."%' ";    // $requestData['search']['value'] contains search parameter
+    $sql.=" WHERE name LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR IC_No LIKE '".$requestData['search']['value']."%' ";
+    $sql.=" OR dob LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR address LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR gender LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR race LIKE '".$requestData['search']['value']."%' ";
+    $sql.=" OR religion LIKE '".$requestData['search']['value']."%' ";
+    $sql.=" OR contact_no LIKE '".$requestData['search']['value']."%' ";
+    $sql.=" OR registration_no LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR category LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR DATE LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR check_in LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR check_out LIKE '".$requestData['search']['value']."%' ";
+    $sql.=" OR remarks LIKE '".$requestData['search']['value']."%' ";
+    $sql.=" OR blacklist LIKE '".$requestData['search']['value']."%' ";
 
     $query=mysqli_query($conn, $sql) or die("Server failed");
     $totalFiltered = mysqli_num_rows($query); // when there is a search parameter then we have to modify total number filtered rows as per search result without limit in the query 
@@ -69,15 +82,21 @@ $data = array();
 while( $row=mysqli_fetch_array($query) ) {  // preparing an array
     $nestedData=array(); 
 
-    $nestedData[] = $row["NAME"];
+    $nestedData[] = $row["name"];
     $nestedData[] = $row["IC_No"];
+    $nestedData[] = $row["dob"];
     $nestedData[] = $row["address"];
     $nestedData[] = $row["gender"];
     $nestedData[] = $row["race"];
+    $nestedData[] = $row["religion"];
+    $nestedData[] = $row["contact_no"];
+    $nestedData[] = $row["registration_no"];
     $nestedData[] = $row["category"];
-    $nestedData[] = $row["DATE"];
+    $nestedData[] = $row["date"];
     $nestedData[] = $row["check_in"];
     $nestedData[] = $row["check_out"];
+    $nestedData[] = $row["remarks"];
+    $nestedData[] = $row["blacklist"];
     
     $data[] = $nestedData;
 }

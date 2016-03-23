@@ -10,11 +10,11 @@
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 	<script src='js/jquery-2.2.1.min.js'></script>
 	<script src='js/bootstrap.min.js'></script>
-    <script type="text/javascript" language="javascript" src="js/time.js" ></script>
+    <script type="text/javascript" src="js/time.js" ></script>
+
 </head>
 <body>
 	<nav class="navbar navbar-default ">
-    <div id="clockbox" align="right"></div>
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand">VMS Dashboard</a>
@@ -32,10 +32,10 @@
 	        <button type="submit" class="btn btn-default">Submit</button>
 	      </form>
 	      <ul class="nav navbar-nav navbar-right">
+            <li><div id="clockbox" style="margin-top: 15px;"></div></li>
 	      	<p class="navbar-text">Signed in as <?php echo $login_session; ?></p>
 	      	<li><a href="settings.php">Settings</a></li>
-	        
-            <!-- Modal -->
+	                  <!-- Modal -->
             <li><div class="modal fade" id="logout" role="dialog">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
@@ -51,7 +51,7 @@
             </li>
 
             <!-- Trigger the modal with a button -->
-            <button type="button" style="margin-top: 10px"class="btn btn-info btn-sm" data-toggle="modal" data-target="#logout">Log Out</button>
+            <button type="button" style="margin-top: 10px;margin-left: 5px;"class="btn btn-info btn-sm" data-toggle="modal" data-target="#logout">Log Out</button>
 	      </ul>
 	    </div>
 		</div>

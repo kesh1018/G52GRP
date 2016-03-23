@@ -22,7 +22,7 @@
 				<label for="user_email"></label>
 				<input type="email" placeholder="Email address" id="user_email" name="user_email">
 				<input type="password" placeholder="Password" id="user_password" name="user_password">
-				<input name="submit" type="submit" id="login-button">
+				<input placeholder="Submit" name="submit" type="submit" id="login-button">
 				<br>
 				<?php echo $error ?>
 			</form>
