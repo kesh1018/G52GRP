@@ -86,8 +86,8 @@
 		                <th>Name</th>
 		                <th>IC No</th>
 		                <th>Date of Birth</th>
-		                <th>Address</th>
 		                <th>Gender</th>
+		                <th>Address</th>
 		                <th>Race</th>
 		                <th>Religion</th>
 		                <th>Contact Number</th>
