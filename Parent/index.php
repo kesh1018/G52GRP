@@ -4,7 +4,6 @@
 
 	if(isset($_SESSION['login_user'])){
 		header("location: dashboard.php");
-		echo "hello";
 	}
 ?>
 
@@ -22,7 +21,7 @@
 				<label for="user_email"></label>
 				<input type="email" placeholder="Email address" id="user_email" name="user_email">
 				<input type="password" placeholder="Password" id="user_password" name="user_password">
-				<input placeholder="Submit" name="submit" type="submit" id="login-button">
+				<input value="Submit" name="submit" type="submit" id="login-button">
 				<br>
 				<?php echo $error ?>
 			</form>
@@ -43,7 +42,7 @@
 	</div>
 
 	<script src='js/jquery-2.2.1.min.js'></script>
-	 <script src='js/index.js'></script> 
+	<script src='js/index.js'></script> 
 	<script src='js/jquery.validate.js'></script>
 
 	<script>

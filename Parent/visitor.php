@@ -11,9 +11,11 @@
 	<script src='js/jquery-2.2.1.min.js'></script>
 	<script src='js/bootstrap.min.js'></script>
     <script type="text/javascript" src="js/time.js" ></script>
+ 
 
 </head>
 <body>
+
 	<nav class="navbar navbar-default ">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -22,20 +24,13 @@
 			<div class="collapse navbar-collapse">
       	<ul class="nav navbar-nav">
 	        <li><a href="dashboard.php">Home</a></li>
-
 	        <li class="active" ><a href="#">Visitor <span class="sr-only">(current)</span></a></li>
 	      </ul>
-	      <form class="navbar-form navbar-left" role="search">
-	        <div class="form-group">
-	          <input type="text" class="form-control" placeholder="Search">
-	        </div>
-	        <button type="submit" class="btn btn-default">Submit</button>
-	      </form>
 	      <ul class="nav navbar-nav navbar-right">
             <li><div id="clockbox" style="margin-top: 15px;"></div></li>
 	      	<p class="navbar-text">Signed in as <?php echo $login_session; ?></p>
 	      	<li><a href="settings.php">Settings</a></li>
-	                  <!-- Modal -->
+	                 
             <li><div class="modal fade" id="logout" role="dialog">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
@@ -49,8 +44,6 @@
                 </div>
             </div>
             </li>
-
-            <!-- Trigger the modal with a button -->
             <button type="button" style="margin-top: 10px;margin-left: 5px;"class="btn btn-info btn-sm" data-toggle="modal" data-target="#logout">Log Out</button>
 	      </ul>
 	    </div>
@@ -70,36 +63,37 @@
 					<li role="presentation"><a href="#edit" data-toggle="tab">Edit Visitor</a></li>
                     <li role="presentation"><a href="#blacklist" data-toggle="tab">Blacklist</a></li>
 				</ul>
-
+          
 				<div class="tab-content">
 					<div class="tab-pane fade in active" id="add">
-						<form role="form" action="add.php">
-							<div class="row" style="margin-top: 20px;">
-                                <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label>Name</label>
-                                        <input type="text" class="form-control" placeholder="Name" name="name" id="name">
+						<form id="myform" role="form" action="" method="POST">
+    							<div class="row" style="margin-top: 20px;">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input  id="name" type="text" class="form-control" name="name" placeholder="Name">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>IC Number</label>
+                                            <input type="text" class="form-control" placeholder="IC Number" name="IC_No" id="IC_No" >
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>IC Number</label>
-                                        <input type="text" class="form-control" placeholder="IC Number" name="IC_No" id="IC_No">
-                                    </div>
-                                </div>
-                            </div>
 
                                     <div class="row">
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Date of Birth</label>
-                                                <input type="text" class="form-control" placeholder="Date of Birth" >
+                                                <input type="text" class="form-control" placeholder="Date of Birth" name="DOB" >
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label>Gender</label>
-                                                <input type="text" class="form-control" placeholder="Gender" >
+                                                <input type="text" class="form-control" placeholder="Gender" name="gender" >
                                             </div>
                                         </div>
                                     </div>
@@ -108,7 +102,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Address</label>
-                                                <input type="text" class="form-control" placeholder="Address">
+                                                <input type="text" class="form-control" placeholder="Address" name="address">
                                             </div>
                                         </div>
                                     </div>
@@ -117,13 +111,13 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Race</label>
-                                                <input type="text" class="form-control" placeholder="Race" >
+                                                <input type="text" class="form-control" placeholder="Race" name="race" >
                                             </div>
                                         </div>
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Religion</label>
-                                                <input type="text" class="form-control" placeholder="Religion" >
+                                                <input type="text" class="form-control" placeholder="Religion" name="religion" >
                                             </div>
                                         </div>
                                     </div>
@@ -132,13 +126,13 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Contact Number</label>
-                                                <input type="text" class="form-control" placeholder="Contact Number" >
+                                                <input type="text" class="form-control" placeholder="Contact Number" name="contact_num" >
                                             </div>
                                         </div>
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Registration Number</label>
-                                                <input type="date" class="form-control" placeholder="Registration Number">
+                                                <input type="date" class="form-control" placeholder="Registration Number" name="registration_num">
                                             </div>
                                         </div>
                                     </div>
@@ -147,13 +141,13 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Category</label>
-                                                <input type="text" class="form-control" placeholder="Category" >
+                                                <input type="text" class="form-control" placeholder="Category" name="category" >
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Date</label>
-                                                <input type="date" class="form-control" placeholder="Date">
+                                                <input type="date" class="form-control" placeholder="Date" name="date">
                                             </div>
                                         </div>
                                     </div>
@@ -161,13 +155,13 @@
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Check In Time</label>
-                                                <input type="time" class="form-control" placeholder="Check In Time">
+                                                <input type="time" class="form-control" placeholder="Check In Time" name="check_in">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Check Out Time</label>
-                                                <input type="time" class="form-control" placeholder="Check Out Time">
+                                                <input type="time" class="form-control" placeholder="Check Out Time" name="check_out">
                                             </div>
                                         </div>
         
@@ -176,14 +170,18 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Remarks</label>
-                                                <input type="time" class="form-control" placeholder="Remarks">
+                                                <input type="text" class="form-control" placeholder="Remarks" name="remarks">
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Add</button>
+                                    <button type="submit" name="add" class="btn btn-info btn-fill pull-right">Add</button>
+                                    
+                                    <button  style="margin-right:20px;"  type="button" id="loadkad" class="btn btn-info btn-fill pull-right">
+                                        Load from MyKad
+                                    </button>
                                     <div class="clearfix"></div>
 						</form>
-					</div>
+                </div>
 
 					<div class="tab-pane fade" id="edit">
                         <form role="form" action="edit.php">
@@ -289,7 +287,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Remarks</label>
-                                                <input type="time" class="form-control" placeholder="Remarks">
+                                                <input type="text" class="form-control" placeholder="Remarks">
                                             </div>
                                         </div>
                                     </div>
@@ -306,6 +304,31 @@
 			</div>
 		</div>
 	</div>
+       <script type="text/javascript">
+        $("#loadkad").click(function(event){
+             try {
+                var obj = new ActiveXObject("mykadproweb.mykadproweb.jpn");
+                var strRet = obj.BeginJPN("FT SCR2000 0");
+                if (strRet == "0") {
+                    document.forms[0].IC_No.value = obj.getIDNum();
+                    document.forms[0].DOB.value = obj.getBirthDate();
+                    document.forms[0].name.value = obj.getKPTName();
+                    document.forms[0].IC_No.value = obj.getOldIDNum();
+                    document.forms[0].religion.value = obj.getReligion();
+                    document.forms[0].gender.value = obj.getGender();
+                    document.forms[0].race.value = obj.getRace();
+                    document.forms[0].address.value = obj.getAddress();
 
+                    obj.EndJPN();
+                }
+                else {
+                    alert("Error : " + strRet);
+                }
+            } catch (e) {
+                    alert("Check connection with MyKadReader or Contact Admin" + e.message);
+            }
+    });
+            
+    </script>
 </body>
 </html>

@@ -23,12 +23,7 @@
 	        <li><a href="dashboard.php">Home</a></li>
 	        <li><a href="visitor.php">Visitor</a></li>
 	    </ul>
-	      <form class="navbar-form navbar-left" role="search">
-	        <div class="form-group">
-	          <input type="text" class="form-control" placeholder="Search">
-	        </div>
-	        <button type="submit" class="btn btn-default">Submit</button>
-	      </form>
+	  
 	    <ul class="nav navbar-nav navbar-right">
 	    	<li><div id="clockbox" style="margin-top: 15px;"></div></li>
 	      <p class="navbar-text">Signed in as <?php echo $login_session; ?></p>

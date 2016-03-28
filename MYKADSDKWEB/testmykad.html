@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>MYKADPro Sample HTML Code</title>
+
+   <script type="text/javascript">
+        function comEventOccured(myform) {
+            try {
+                var obj = new ActiveXObject("mykadproweb.mykadproweb.jpn");
+                var strRet = obj.BeginJPN("FT SCR2000 0");
+                if (strRet == "0") {
+                    document.forms[0].txtIDNum.value = obj.getIDNum();
+           
+
+                    obj.EndJPN();
+                }
+                else {
+                    alert("mykadproweb message: " + strRet);
+                }
+            } catch (e) {
+                    alert("mykadpro: You dont have MYKAD SDK or FT SCR2000 reader." + e.message);
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <h1>
+        Load MYKAD Portal Sample</h1>
+        <h2>Copy this code to your IIS or XAMPP (Apache Web Server)</h2>
+    <form id="myform" action="" method="post">
+    <p>
+        <table border="0" width="50%" style="float: left; font-family: 'Helvetica', Arial, Verdana;
+            font-size: 12px;">
+			<tr>
+				<td colspan="2" valign=middle style='border: 1 solid #dfdfdf;' id='show_pic'>
+				<img width="150px" height="200px" src='photoblank.jpg'></img>
+				</td>
+			</tr>
+            <tr>
+                <td>
+                    IC NO:
+                </td>
+                <td>
+                    <input id="txtIDNum" type="text" size="30" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    DOB:
+                </td>
+                <td>
+                    <input id="txtBirthDate" type="text" size="30" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    NAME:
+                </td>
+                <td>
+                    <input id="txtKPTName" type="text" size="50" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    OLD IC NO:
+                </td>
+                <td>
+                    <input id="txtOldIDNum" type="text" size="30" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    RELIGION:
+                </td>
+                <td>
+                    <input id="txtReligion" type="text" size="30" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    GENDER:
+                </td>
+                <td>
+                    <input id="txtGender" type="text" size="30" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    RACE:
+                </td>
+                <td>
+                    <input id="txtRace" type="text" size="30" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ADDRESS:
+                </td>
+                <td>
+                    <textarea id="txtAddress1" rows="5" cols="50"> </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <input type="button" value="Load MYKAD" onclick="comEventOccured(myform)" />
+                    (Tested on Internet Explorer 7)
+                </td>
+            </tr>
+            
+            <tr>
+            <td colspan="2">
+            If you get error message "Automation server can't create object" or nothing happen, please check<br />
+            Menu Tools > Internet Options > Security > Custom Level <br />
+            Set your IE security setting "Initialize and script ActiveX..." to "Prompt" <br />
+            <img src="iesecurity_setting.jpg" alt="ie" />
+            </td>
+            </tr>
+        </table>
+    </p>
+    </form>
+</body>
+</html>

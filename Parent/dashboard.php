@@ -41,12 +41,7 @@
 	       
 	       	<li><a href="visitor.php">Visitor</a></li>
 	      </ul>
-	      <form class="navbar-form navbar-left" role="search">
-	        <div class="form-group">
-	          <input type="text" class="form-control" placeholder="Search">
-	        </div>
-	        <button type="submit" class="btn btn-default">Submit</button>
-	      </form>
+	
 	      <ul class="nav navbar-nav navbar-right">
 	      	<li><div id="clockbox" style="margin-top: 15px;"></div></li>
 	      	<p class="navbar-text">Signed in as <?php echo $login_session; ?></p>
@@ -77,7 +72,7 @@
 		<div class="col-lg-12" style="">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					Visitor List
+					List of Check Ins
 				</div>
 				<div class="panel-body">
 				<table class="table table-striped table-bordered table-hover" id="example" width="100%" cellspacing="0">
