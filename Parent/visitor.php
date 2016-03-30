@@ -11,8 +11,6 @@
 	<script src='js/jquery-2.2.1.min.js'></script>
 	<script src='js/bootstrap.min.js'></script>
     <script type="text/javascript" src="js/time.js" ></script>
- 
-
 </head>
 <body>
 
@@ -66,19 +64,19 @@
           
 				<div class="tab-content">
 					<div class="tab-pane fade in active" id="add">
-						<form id="myform" role="form" action="" method="POST">
+						<form id="myform" role="form" action="add.php" method="POST">
     							<div class="row" style="margin-top: 20px;">
                                     <div class="col-md-5">
                                         <div class="form-group">
                                             <label>Name</label>
-                                            <input  id="name" type="text" class="form-control" name="name" placeholder="Name">
+                                            <input type="text" class="form-control" placeholder="Name" name="Name">
                                             
                                         </div>
                                     </div>
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label>IC Number</label>
-                                            <input type="text" class="form-control" placeholder="IC Number" name="IC_No" id="IC_No" >
+                                            <input type="text" class="form-control" placeholder="IC Number" name="IC_No" >
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +130,7 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Registration Number</label>
-                                                <input type="date" class="form-control" placeholder="Registration Number" name="registration_num">
+                                                <input type="text" class="form-control" placeholder="Registration Number" name="registration_num">
                                             </div>
                                         </div>
                                     </div>
@@ -249,7 +247,7 @@
                                         <div class="col-md-5">
                                             <div class="form-group">
                                                 <label>Registration Number</label>
-                                                <input type="date" class="form-control" placeholder="Registration Number">
+                                                <input type="text" class="form-control" placeholder="Registration Number">
                                             </div>
                                         </div>
                                     </div>
@@ -263,10 +261,15 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label>Date</label>
-                                                <input type="date" class="form-control" placeholder="Date">
+                                                    <label>Date</label>
+                                                    <input type="text" class="form-control" placeholder="Date" id="datetimepicker4" />
                                             </div>
                                         </div>
+                                            <script type="text/javascript">
+                                                $(function (){
+                                                    $('#datetimepicker4').datetimepicker();
+                                                });
+                                            </script>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4">
@@ -312,8 +315,7 @@
                 if (strRet == "0") {
                     document.forms[0].IC_No.value = obj.getIDNum();
                     document.forms[0].DOB.value = obj.getBirthDate();
-                    document.forms[0].name.value = obj.getKPTName();
-                    document.forms[0].IC_No.value = obj.getOldIDNum();
+                    document.forms[0].Name.value = obj.getKPTName();
                     document.forms[0].religion.value = obj.getReligion();
                     document.forms[0].gender.value = obj.getGender();
                     document.forms[0].race.value = obj.getRace();
