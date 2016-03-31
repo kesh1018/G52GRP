@@ -185,10 +185,7 @@
                         <form role="form" action="edit.php">
 						<div class="row" style="margin-top: 20px;">
                             <div class="col-md-5">
-                                <div class="form-group">
-                                    <label>Name</label>
-                                    <input type="text" class="form-control" placeholder="Name" name="name" id="name">
-                                </div>
+                          
                             </div>
                                 <div class="col-md-3">
                                     <div class="form-group">

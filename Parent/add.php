@@ -8,8 +8,9 @@
 
 	$db = mysql_select_db("dbregistration", $connection);
 
-	if (isset( $_POST['add'])) {
-			$name = $_POST['name'];
+	if (isset($_POST['add'])) {
+			
+		  	$name = $_POST['Name'];
 			$IC_No= $_POST['IC_No'];
 			$DOB = $_POST['DOB'];
 			$gender= $_POST['gender'];
@@ -41,18 +42,11 @@
 			$remarks = mysql_real_escape_string($remarks);
 			
 
-			$query = " INSERT INTO visitor_list ('name', 'IC_No', 'dob', 'gender', 'address', 'race', 'religion', 'contact_no', registration_no', 'category', 'date', 'check_in', 'check_out', 'remarks', 'blacklist')
-				VALUES ('$name', '$IC_No', '$DOB','$gender', '$address', '$race','$religion', '$contact_num', '$registration_num', '$category', '$date', '$check_in', NULL, '$remarks', NULL)";
+			$query = " INSERT INTO visitor_list (name, IC_No, dob, gender, address, race, religion, contact_no, registration_no, category, date, check_in, check_out, remarks, blacklist)
+				VALUES ('$name', '$IC_No', '$DOB','$gender', '$address', '$race','$religion', '$contact_num', '$registration_num', '$category', '$date', '$check_in', 'check_out', '$remarks', '$blacklist')";
 
 			mysql_query($query);
-
-			if(mysql_query($query)){
-			    echo "Records added successfully.";
-			} else{
-			    echo "ERROR: Could not able to execute $query. " . mysql_error($connection);
-			}
-
-	mysql_close($connection);
+			mysql_close($connection);
 }
-	//header('Location: visitor.php');
+	header('Location: visitor.php');
 ?>
