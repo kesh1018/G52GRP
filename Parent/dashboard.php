@@ -21,10 +21,14 @@
 						 responsive: true,
 						"stateSave" : true,
 						"autoWidth": true,
+						"text" : 'Export',
+						"buttons" : [ 'copy', 'csv', 'excel' ],
 						"pagingType": "full_numbers",
 						"ajax":{
 							url: "server-datatable.php",
 						}
+						
+						
 						});
 					});
 			</script>
@@ -69,10 +73,10 @@
 	</nav>
 	<div class="container-fluid">
 	<div class="row">
-		<div class="col-lg-12" style="">
+		<div class="col-lg-12">
 			<div class="panel panel-default">
-				<div class="panel-heading">
-					List of Check Ins
+				<div class="panel-heading" style="text-align: center;">
+					History of Check Ins
 				</div>
 				<div class="panel-body">
 				<table class="table table-striped table-bordered table-hover" id="example" width="100%" cellspacing="0">
