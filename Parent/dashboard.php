@@ -66,7 +66,7 @@
 	        </li>
 
 	         <!-- Trigger the modal with a button -->
-	        <button type="button" style="margin-top: 10px;margin-left: 5px;"class="btn btn-info btn-sm" data-toggle="modal" data-target="#logout">Log Out</button>
+	     etoggle="modal" data-target="#logout">Log Out</button>
 	      </ul>
 	    </div>
 		</div>

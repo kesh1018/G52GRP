@@ -8,9 +8,11 @@
 	<meta charset="utf-8" />
 	<title>Visitor Management System Dashboard</title>
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-editable.css" rel="stylesheet">
 	<script src='js/jquery-2.2.1.min.js'></script>
 	<script src='js/bootstrap.min.js'></script>
-    <script type="text/javascript" src="js/time.js" ></script>
+    <script src="js/time.js"></script>
+    <script src="js/bootstrap-editable.min.js"></script>
 </head>
 <body>
 
@@ -185,7 +187,7 @@
                             Click to Edit
                         </div>
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table table-hover" id="xeditable">
                                   <thead>
                                     <tr>
                                         <th>Name</th>
@@ -265,8 +267,22 @@
             } catch (e) {
                     alert("Check connection with MyKadReader or Contact Admin" + e.message);
             }
-    });
-            
-    </script>
+        });
+        </script>
+        <script type="text/javascript">
+        $(document).ready(function() {
+            $.fn.editable.defaults.mode = 'inline';     
+            //make editable
+            $('#xeditable td').editable({
+                title: 'Enter edit'
+            });
+
+            $.ajax({
+                url: "edit.php",
+                type: POST
+            });
+
+        });
+        </script>
 </body>
 </html>
