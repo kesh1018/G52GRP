@@ -209,28 +209,35 @@
                                 </thead>
                                 <tbody>
                                     <?php
+                                        $connection = mysql_connect("localhost", "root", "");
+
+                                        if(!$connection){
+                                            die('Could not connect :' . mysqli_error());
+                                        }
+                                        $db = mysql_select_db("dbregistration", $connection);
                                         $query = mysql_query("select * from visitor_list");
                                         while($fetch = mysql_fetch_array($query)){
-                                            echo 
-                                            '<tr>
-                                                <td> '.$fetch['name'].'</td>
-                                                <td> '.$fetch['IC_No'].'</td>
-                                                <td> '.$fetch['dob'].'</td>
-                                                <td> '.$fetch['gender'].'</td>
-                                                <td> '.$fetch['address'].'</td>
-                                                <td> '.$fetch['race'].'</td>
-                                                <td> '.$fetch['religion'].'</td>
-                                                <td> '.$fetch['contact_no'].'</td>
-                                                <td> '.$fetch['registration_no'].'</td>
-                                                <td> '.$fetch['category'].'</td>
-                                                <td> '.$fetch['date'].'</td>
-                                                <td> '.$fetch['check_in'].'</td>
-                                                <td> '.$fetch['check_out'].'</td>
-                                                <td> '.$fetch['remarks'].'</td>
-                                                <td> '.$fetch['blacklist'].'</td>
-                                            </tr>';
-                                        }
-                                    ?>
+                                            ?>
+                                            <tr>
+                                            
+                                            <td><a id="name" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['name']; ?></a></td>
+                                            <td><a id="IC_No" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['IC_No']; ?></a></td>
+                                            <td><a id="dob" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['dob']; ?></a></td>
+                                            <td><a id="gender" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['gender']; ?></a></td>
+                                            <td><a id="address" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['address']; ?></a></td>
+                                            <td><a id="race" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['race']; ?></a></td>
+                                            <td><a id="religion" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['religion']; ?></a></td>
+                                            <td><a id="contact_no" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['contact_no']; ?></a></td>
+                                            <td><a id="registration_no" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['registration_no']; ?></a></td>
+                                            <td><a id="category" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['category']; ?></a></td>
+                                            <td><a id="date" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['date']; ?></a></td>
+                                            <td><a id="check_in" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['check_in']; ?></a></td>
+                                            <td><a id="check_out" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['check_out']; ?></a></td>
+                                            <td><a id="remarks" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['remarks']; ?></a></td>
+                                            <td><a id="blacklist" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['blacklist']; ?></a></td>
+                                            
+                                            </tr>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>
@@ -273,15 +280,13 @@
         $(document).ready(function() {
             $.fn.editable.defaults.mode = 'inline';     
             //make editable
-            $('#xeditable td').editable({
-                title: 'Enter edit'
+            $('#xeditable td a').editable({
+                title: 'Enter edit',
+                url: 'edit.php',
+                ajaxOptions : {
+                    type: 'POST'
+                }
             });
-
-            $.ajax({
-                url: "edit.php",
-                type: POST
-            });
-
         });
         </script>
 </body>
