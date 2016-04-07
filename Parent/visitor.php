@@ -14,12 +14,12 @@
     <script src="js/time.js"></script>
     <script src="js/bootstrap-editable.min.js"></script>
 </head>
-<body>
+<body style="font-size: 20px;">
 
 	<nav class="navbar navbar-default ">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand">VMS Dashboard</a>
+				<a class="navbar-brand" style="font-size: 20px;">VMS Dashboard</a>
 			</div>
 			<div class="collapse navbar-collapse">
       	<ul class="nav navbar-nav">
@@ -27,14 +27,14 @@
 	        <li class="active" ><a href="#">Visitor <span class="sr-only">(current)</span></a></li>
 	      </ul>
 	      <ul class="nav navbar-nav navbar-right">
-            <li><div id="clockbox" style="margin-top: 15px;"></div></li>
-	      	<p class="navbar-text">Signed in as <?php echo $login_session; ?></p>
+            <li><div id="clockbox" style="margin-top: 12px;"></div></li>
+	      	    <h3 class="navbar-text" style="font-size: 20px;" >Signed in as <?php echo $login_session; ?></h3>
 	      	<li><a href="settings.php">Settings</a></li>
 	                 
             <li><div class="modal fade" id="logout" role="dialog">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
-                        <div class="modal-header"><h4>Log Out<i class="fa fa-lock"></i></h4></div>
+                        <div class="modal-header"><h4 >Log Out<i class="fa fa-lock"></i></h4></div>
                             <div class="modal-body"><i class="fa fa-question-circle"></i>Are you sure you want to logout?</div>
                                 <div class="modal-footer">
                                 <button class="btn" data-dismiss="modal" aria-hidden="true"><i class="fa fa-remove"></i>No</button>

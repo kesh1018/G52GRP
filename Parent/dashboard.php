@@ -33,11 +33,11 @@
 					});
 			</script>
 </head>
-<body>
+<body style="font-size: 20px;">
 	<nav class="navbar navbar-default navbar-fixed">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand">VMS Dashboard</a>
+				<a class="navbar-brand" style="font-size: 20px;" >VMS Dashboard</a>
 			</div>
 	<div class="collapse navbar-collapse">
       	<ul class="nav navbar-nav navbar-left">
@@ -47,8 +47,8 @@
 	      </ul>
 	
 	      <ul class="nav navbar-nav navbar-right">
-	      	<li><div id="clockbox" style="margin-top: 15px;"></div></li>
-	      	<p class="navbar-text">Signed in as <?php echo $login_session; ?></p>
+	      	<li><div id="clockbox" style="margin-top: 12px;"></div></li>
+	      		<h3 class="navbar-text" style="font-size: 20px;" >Signed in as <?php echo $login_session; ?></h3>
 	      	<li><a href="settings.php">Settings</a></li>
 	        	        <!-- Modal -->
 	        <li><div class="modal fade" id="logout" role="dialog">
