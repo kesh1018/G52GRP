@@ -79,6 +79,7 @@
 					History of Check Ins
 				</div>
 				<div class="panel-body">
+			<div class="table-responsive">
 				<table class="table table-striped table-bordered table-hover" id="example" width="100%" cellspacing="0">
 		        <thead>
 		            <tr>
@@ -100,6 +101,7 @@
 		            </tr>
 		       	</thead>
 		   		</table>
+		   	</div>
 		   		</div>
 			</div>
 		</div>

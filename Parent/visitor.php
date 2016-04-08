@@ -50,208 +50,240 @@
 		</div>
 	</nav>
 
-	<div class="row">
 		<div class="col-lg-12" >
 			<div class="panel panel-default" style="margin-left:15px; margin-right:15px;">
 				<div class="panel-heading" style="text-align: center;">
 					Visitor Information
 				</div>
-		<div class="panel-body">
-			<div role="tabpanel">
-				<ul class= "nav nav-tabs">
-					<li role="presentation" class="active"><a href="#add" data-toggle="tab">Add Visitor</a></li>
-					<li role="presentation"><a href="#edit" data-toggle="tab">Edit Visitor</a></li>
-                    <li role="presentation"><a href="#blacklist" data-toggle="tab">Blacklist</a></li>
-				</ul>
-          
-				<div class="tab-content">
-					<div class="tab-pane fade in active" id="add">
-						<form id="myform" role="form" action="add.php" method="POST">
-    							<div class="row" style="margin-top: 20px;">
-                                    <div class="col-md-5">
-                                        <div class="form-group">
-                                            <label>Name</label>
-                                            <input type="text" class="form-control" placeholder="Name" name="Name">
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <label>IC Number</label>
-                                            <input type="text" class="form-control" placeholder="IC Number" name="IC_No" >
-                                        </div>
-                                    </div>
-                                </div>
-
-                                    <div class="row">
+    		<div class="panel-body">
+    			<div role="tabpanel">
+    				<ul class= "nav nav-tabs">
+    					<li role="presentation"><a href="#add" data-toggle="tab">Add Visitor</a></li>
+    					<li role="presentation"><a href="#edit" data-toggle="tab">Edit Visitor</a></li>
+                        <li role="presentation"><a href="#editblacklist" data-toggle="tab">Check Blacklist</a></li>
+    				</ul>
+              
+    				<div class="tab-content">
+    					<div class="tab-pane fade in active" id="add">
+    						<form id="myform" role="form" action="add.php" method="POST">
+        							<div class="row" style="margin-top: 20px;">
                                         <div class="col-md-5">
                                             <div class="form-group">
-                                                <label>Date of Birth</label>
-                                                <input type="text" class="form-control" placeholder="Date of Birth" name="DOB" >
+                                                <label>Name</label>
+                                                <input type="text" class="form-control" placeholder="Name" name="Name">
+                                                
                                             </div>
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-group">
-                                                <label>Gender</label>
-                                                <input type="text" class="form-control" placeholder="Gender" name="gender" >
+                                                <label>IC Number</label>
+                                                <input type="text" class="form-control" placeholder="IC Number" name="IC_No" >
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Address</label>
-                                                <input type="text" class="form-control" placeholder="Address" name="address">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>Date of Birth</label>
+                                                    <input type="text" class="form-control" placeholder="Date of Birth" name="DOB" >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>Gender</label>
+                                                    <input type="text" class="form-control" placeholder="Gender" name="gender" >
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label>Race</label>
-                                                <input type="text" class="form-control" placeholder="Race" name="race" >
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>Address</label>
+                                                    <input type="text" class="form-control" placeholder="Address" name="address">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label>Religion</label>
-                                                <input type="text" class="form-control" placeholder="Religion" name="religion" >
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="row">
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label>Contact Number</label>
-                                                <input type="text" class="form-control" placeholder="Contact Number" name="contact_num" >
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>Race</label>
+                                                    <input type="text" class="form-control" placeholder="Race" name="race" >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>Religion</label>
+                                                    <input type="text" class="form-control" placeholder="Religion" name="religion" >
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label>Registration Number</label>
-                                                <input type="text" class="form-control" placeholder="Registration Number" name="registration_num">
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Category</label>
-                                                <input type="text" class="form-control" placeholder="Category" name="category" >
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>Contact Number</label>
+                                                    <input type="text" class="form-control" placeholder="Contact Number" name="contact_num" >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>Registration Number</label>
+                                                    <input type="text" class="form-control" placeholder="Registration Number" name="registration_num">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Date</label>
-                                                <input type="date" class="form-control" placeholder="Date" name="date">
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Category</label>
+                                                    <input type="text" class="form-control" placeholder="Category" name="category" >
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Date</label>
+                                                    <input type="date" class="form-control" placeholder="Date" name="date">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Check In Time</label>
-                                                <input type="time" class="form-control" placeholder="Check In Time" name="check_in">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Check In Time</label>
+                                                    <input type="time" class="form-control" placeholder="Check In Time" name="check_in">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Check Out Time</label>
+                                                    <input type="time" class="form-control" placeholder="Check Out Time" name="check_out">
+                                                </div>
+                                            </div>
+            
+                                        </div>
+                                         <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label>Remarks</label>
+                                                    <input type="text" class="form-control" placeholder="Remarks" name="remarks">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label>Check Out Time</label>
-                                                <input type="time" class="form-control" placeholder="Check Out Time" name="check_out">
-                                            </div>
-                                        </div>
-        
-                                    </div>
-                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Remarks</label>
-                                                <input type="text" class="form-control" placeholder="Remarks" name="remarks">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="submit" name="add" class="btn btn-info btn-fill pull-right">Add</button>
-                                    
-                                    <button  style="margin-right:20px;"  type="button" id="loadkad" class="btn btn-info btn-fill pull-right">
-                                        Load from MyKad
-                                    </button>
-                                    <div class="clearfix"></div>
-						</form>
-                </div>
-                    <div class="tab-pane fade" id="edit">
-                        <div class="panel-heading" style="text-align: center; font-size: 14px;">
-                            Click to Edit
+                                        <button type="submit" name="add" class="btn btn-info btn-fill pull-right">Add</button>
+                                        
+                                        <button  style="margin-right:20px;"  type="button" id="loadkad" class="btn btn-info btn-fill pull-right">
+                                            Load from MyKad
+                                        </button>
+                                        <div class="clearfix"></div>
+    						</form>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table table-hover" id="xeditable">
-                                  <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>IC No</th>
-                                        <th>Date of Birth</th>
-                                        <th>Gender</th>
-                                        <th>Address</th>
-                                        <th>Race</th>
-                                        <th>Religion</th>
-                                        <th>Contact Number</th>
-                                        <th>Registration Number</th>
-                                        <th>Category</th>
-                                        <th>Date</th>
-                                        <th>Check In Time</th>
-                                        <th>Check Out Time</th>
-                                        <th>Remarks</th>
-                                        <th>Blacklist</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                        $connection = mysql_connect("localhost", "root", "");
+                        <div class="tab-pane fade" id="edit">
+                            <div class="panel-heading" style="text-align: center; font-size: 20px;">
+                                Click to Edit
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover" id="xeditable">
+                                      <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>IC No</th>
+                                            <th>Date of Birth</th>
+                                            <th>Gender</th>
+                                            <th>Religion</th>
+                                            <th>Race</th>
+                                            <th>Address</th>
+                                            <th>Contact Number</th>
+                                            <th>Registration Number</th>
+                                            <th>Category</th>
+                                            <th>Date</th>
+                                            <th>Check In Time</th>
+                                            <th>Check Out Time</th>
+                                            <th>Remarks</th>
+                                            <th>Blacklist</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                            $connection = mysql_connect("localhost", "root", "");
 
-                                        if(!$connection){
-                                            die('Could not connect :' . mysqli_error());
-                                        }
-                                        $db = mysql_select_db("dbregistration", $connection);
-                                        $query = mysql_query("select * from visitor_list");
-                                        while($fetch = mysql_fetch_array($query)){
-                                            ?>
-                                            <tr>
-                                            
-                                            <td><a id="name" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['name']; ?></a></td>
-                                            <td><a id="IC_No" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['IC_No']; ?></a></td>
-                                            <td><a id="dob" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['dob']; ?></a></td>
-                                            <td><a id="gender" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['gender']; ?></a></td>
-                                            <td><a id="address" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['address']; ?></a></td>
-                                            <td><a id="race" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['race']; ?></a></td>
-                                            <td><a id="religion" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['religion']; ?></a></td>
-                                            <td><a id="contact_no" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['contact_no']; ?></a></td>
-                                            <td><a id="registration_no" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['registration_no']; ?></a></td>
-                                            <td><a id="category" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['category']; ?></a></td>
-                                            <td><a id="date" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['date']; ?></a></td>
-                                            <td><a id="check_in" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['check_in']; ?></a></td>
-                                            <td><a id="check_out" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['check_out']; ?></a></td>
-                                            <td><a id="remarks" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['remarks']; ?></a></td>
-                                            <td><a id="blacklist" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['blacklist']; ?></a></td>
-                                            
-                                            </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
+                                            if(!$connection){
+                                                die('Could not connect :' . mysqli_error());
+                                            }
+                                            $db = mysql_select_db("dbregistration", $connection);
+                                            $query = mysql_query("select * from visitor_list");
+                                            while($fetch = mysql_fetch_array($query)){
+                                                ?>
+                                                <tr>
+                                                
+                                                <td><a id="name" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['name']; ?></a></td>
+                                                <td><p id="IC_No" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['IC_No']; ?></p></td>
+                                                <td><p id="dob" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['dob']; ?></p></td>
+                                                <td><p id="gender" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['gender']; ?></p></td>
+                                                <td><p id="race" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['race']; ?></p></td>
+                                                <td><p id="religion" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['religion']; ?></p></td>
+                                                <td><a id="address" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['address']; ?></a></td>
+                                                <td><a id="contact_no" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['contact_no']; ?></a></td>
+                                                <td><a id="registration_no" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['registration_no']; ?></a></td>
+                                                <td><a id="category" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['category']; ?></a></td>
+                                                <td><a id="date" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['date']; ?></a></td>
+                                                <td><a id="check_in" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['check_in']; ?></a></td>
+                                                <td><a id="check_out" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['check_out']; ?></a></td>
+                                                <td><a id="remarks" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['remarks']; ?></a></td>
+                                                <td><a id="blacklist" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['blacklist']; ?></a></td>
+                                                
+                                                </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                    </div>
-					
-					<div class="tab-pane fade" id="blacklist">
-						
-					</div>
-				</div>
-			
-			</div>
-			</div>
-		</div>
-	</div>
+    					
+    					<div class="tab-pane fade" id="editblacklist">
+                            <div class="panel-heading" style="text-align: center; font-size: 20px;">
+                                List of BlackList
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                      <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>IC No</th>
+                                            <th>Blacklist</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                            $connection = mysql_connect("localhost", "root", "");
+
+                                            if(!$connection){
+                                                die('Could not connect :' . mysqli_error());
+                                            }
+                                            $db = mysql_select_db("dbregistration", $connection);
+                                            $query = mysql_query("select * from visitor_list where `blacklist` = 'YES'");
+                                            while($fetch = mysql_fetch_array($query)){
+                                                ?>
+                                                <tr>
+                                                
+                                                <td><p><?php echo $fetch['name']; ?></p></td>
+                                                <td><p> <?php echo $fetch['IC_No']; ?></p></td>
+                                                <td><p> <?php echo $fetch['blacklist']; ?></p></td>
+                                                
+                                                </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                                </div>
+    				    </div>
+
+    			     </div>
+			     </div>
+		      </div>
+	       </div>
+    </div>
        <script type="text/javascript">
         $("#loadkad").click(function(event){
              try {
@@ -278,7 +310,7 @@
         </script>
         <script type="text/javascript">
         $(document).ready(function() {
-            $.fn.editable.defaults.mode = 'inline';     
+            $.fn.editable.defaults.mode = 'popup';     
             //make editable
             $('#xeditable td a').editable({
                 title: 'Enter edit',
@@ -287,6 +319,7 @@
                     type: 'POST'
                 }
             });
+
         });
         </script>
 </body>
