@@ -20,36 +20,37 @@
                 <a class="navbar-brand" style="font-size: 20px;">VMS Dashboard</a>
             </div>
             <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-            <li><a href="dashboard.php">Home</a></li>
-            <li><a href="visitor.php">Visitor</a></li>
-        </ul>
-      
-        <ul class="nav navbar-nav navbar-right">
-            <li><div id="clockbox" style="margin-top: 13px;"></div></li>
-          <h3 class="navbar-text" style="font-size: 20px;" >Signed in as <?php echo $login_session; ?></h3>
-            <li class="active"><a href="#">Settings <span class="sr-only">(current)</span></a></li>
+		        <ul class="nav navbar-nav">
+		            <li><a href="dashboard.php">Home</a></li>
+		            <li><a href="visitor.php">Visitor</a></li>
+		        </ul>
+      			<ul class="nav navbar-nav navbar-right">
+		            <li><div id="clockbox" style="margin-top: 13px;"></div></li>
+		        <h3 class="navbar-text" style="font-size: 20px;" >Signed in as <?php echo $login_session; ?></h3>
+            		<li class="active"><a href="#">Settings <span class="sr-only">(current)</span></a></li>
+
            <!-- Modal -->
             <li><div class="modal fade" id="logout" role="dialog">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                        <div class="modal-header"><h4>Log Out<i class="fa fa-lock"></i></h4></div>
-                            <div class="modal-body"><i class="fa fa-question-circle"></i>Are you sure you want to logout?</div>
-                                <div class="modal-footer">
-                                <button class="btn" data-dismiss="modal" aria-hidden="true"><i class="fa fa-remove"></i>No</button>
-                                <a href="logout.php" class="btn btn-danger"><i class="fa fa-check"></i>Yes</a>
-                                </div>
-                    </div>
-                </div>
-            </div>
+                	<div class="modal-dialog modal-sm">
+                    	<div class="modal-content">
+	                        <div class="modal-header"><h4>Log Out<i class="fa fa-lock"></i></h4></div>
+	                            <div class="modal-body"><i class="fa fa-question-circle"></i>Are you sure you want to logout?</div>
+	                                <div class="modal-footer">
+	                                <button class="btn" data-dismiss="modal" aria-hidden="true"><i class="fa fa-remove"></i>No</button>
+	                                <a href="logout.php" class="btn btn-danger"><i class="fa fa-check"></i>Yes</a>
+	                                </div>
+                    	</div>
+                	</div>
+            	</div>
             </li>
 
             <!-- Trigger the modal with a button -->
             <button type="button" style="margin-top: 10px;margin-left: 5px;"class="btn btn-info btn-sm" data-toggle="modal" data-target="#logout">Log Out</button>
-          </ul>
-        </div>
+          		</ul>
+        	</div>
         </div>
     </nav>
+
 
     <div class="row">
         <div class="col-lg-12">
