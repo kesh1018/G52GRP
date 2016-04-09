@@ -244,7 +244,7 @@
     					
     					<div class="tab-pane fade" id="editblacklist">
                             <div class="panel-heading" style="text-align: center; font-size: 20px;">
-                                List of BlackList
+                                Visitor on Blacklist
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-hover">
@@ -319,6 +319,65 @@
                     type: 'POST'
                 }
             });
+
+        });
+        </script>
+
+        <script src='js/jquery.validate.js'></script>
+
+        <script>
+        $("#myform").validate({
+
+            rules: {
+            Name: {
+                required: true
+            },
+            IC_No: {
+                required: true,
+                number : true
+            },
+
+            DOB : {
+                required: true
+            },
+
+            gender :{
+                required: true
+            },
+
+            address: {
+                required: true
+            },
+
+            race :{
+                required: true
+            },
+
+            religion: {
+                required: true
+            },
+
+            contact_num:{
+                required: true
+            },
+
+            registration_num:{
+                required: true
+            },
+
+            category:{
+                required: true
+            },
+
+            date:{
+                required: true
+            },
+
+            check_in:{
+                required: true
+            }
+
+        }
 
         });
         </script>
