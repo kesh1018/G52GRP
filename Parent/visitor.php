@@ -146,7 +146,6 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label>Date</label>
-                                                    <input type="date" class="form-control" placeholder="Date" name="date">
                                                 </div>
                                             </div>
                                         </div>

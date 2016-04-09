@@ -18,7 +18,7 @@
 					var dataTable =$('#example').dataTable({
 						"serverSide": true,
 						"processing": true,
-						 responsive: true,
+						"responsive": true,
 						"stateSave" : true,
 						"autoWidth": true,
 						"text" : 'Export',
@@ -26,9 +26,7 @@
 						"pagingType": "full_numbers",
 						"ajax":{
 							url: "server-datatable.php",
-						}
-						
-						
+						}			
 						});
 					});
 			</script>
