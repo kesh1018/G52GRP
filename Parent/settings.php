@@ -53,6 +53,8 @@
         </div>
     </nav>
 
+    <?php if ($_SESSION['login_user']=="admin@vms.com"){ ?>
+  
         <div class="col-lg-12">
             <div class="panel panel-default" style="margin-left:15px; margin-right:15px;">
                 <div class="panel-heading">
@@ -282,6 +284,17 @@
             </div>
         </div>
 
+    <?php }
+
+    elseif ($_SESSION['login_user']=="guard1@vms.com"){ ?>
+        <div class="col-lg-12">
+            <div class="panel panel-default" style="margin-left:15px; margin-right:15px;">
+                <div class="panel-heading" style="text-align: center;">
+                    Contact Administrator
+                </div>
+            </div>
+        </div>
+    <?php } ?>
 
 <script type="text/javascript">
         $("#loadkad").click(function(event){
