@@ -9,9 +9,9 @@
 	$db = mysql_select_db("dbregistration", $connection);
 
 
-	if (isset($_POST['add'])) {
+	if (isset($_POST['addguard'])) {
 			
-		  	$name = $_POST['Name'];
+		  	$name = $_POST['name'];
 		  	$guard_id = $_POST['guard_id'];
 			$IC_No= $_POST['IC_No'];
 			$gender= $_POST['gender'];
@@ -23,9 +23,8 @@
 			$check_in = $_POST['check_in'];
 			$date2 = $_POST['date2'];
 			$check_out = $_POST['check_out'];
-			$remarks = $_POST['remarks'];
 		
-
+		
 			$name = mysql_real_escape_string($name);
 			$guard_id = mysql_real_escape_string($guard_id);
 			$IC_No = mysql_real_escape_string($IC_No);
@@ -38,16 +37,14 @@
 			$check_in = mysql_real_escape_string($check_in);
 			$date2 = mysql_real_escape_string($date2);
 			$check_out = mysql_real_escape_string($check_out);
-			$remarks = mysql_real_escape_string($remarks);
-			
-			
-			$query = " INSERT INTO guard_list (name, guard_id, IC_No, gender, race, religion, address, contact_no, date1, check_in, date2, check_out, remarks)
-			VALUES ('$name', '$guard_id', '$IC_No', $gender', '$race','$religion', '$address', '$contact_no', '$date1', '$check_in', '$date2', 'check_out', '$remarks')";
 
-				mysql_query($query);
-				mysql_close($connection);
 			
-			}
+			$query3 = " INSERT INTO guard_list (name, guard_id, IC_No, gender, race, religion, address, contact_no, date1, check_in, date2, check_out)
+			VALUES ('$name', '$guard_id', '$IC_No', '$gender', '$race','$religion', '$address', '$contact_no', '$date1', '$check_in', '$date2', '$check_out')";
+
+			mysql_query($query3);
+			mysql_close($connection);
 			
-	header("location: settings.php"); 
+	}
+	header("location: settings.php");
 ?>

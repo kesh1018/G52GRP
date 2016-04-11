@@ -8,32 +8,12 @@
     <meta charset="utf-8" />
     <title>Visitor Management System Dashboard</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/jquery.dataTables.css" rel="stylesheet" />
-    <script type="text/javascript" language="javascript" src='js/jquery.js'></script>
-    <script type="text/javascript" language="javascript" src='js/bootstrap.min.js'></script>
-    <script type="text/javascript" language="javascript" src='js/jquery.dataTables.js'></script>
+    <link href="css/bootstrap-editable.css" rel="stylesheet">
     <script src='js/jquery-2.2.1.min.js'></script>
     <script src='js/bootstrap.min.js'></script>
-    <script type="text/javascript" src="js/time.js" ></script>
-    <script src='js/guardList.js' type="text/javascript" ></script>
+    <script src="js/time.js"></script>
+    <script src="js/bootstrap-editable.min.js"></script>
 
-    <script type="text/javascript" language="javascript">
-                 $(document).ready(function(){
-                    var dataTable =$('#example').dataTable({
-                        "serverSide": true,
-                        "processing": true,
-                        "responsive": true,
-                        "stateSave" : true,
-                        "autoWidth": true,
-                        "text" : 'Export',
-                        "buttons" : [ 'copy', 'csv', 'excel' ],
-                        "pagingType": "full_numbers",
-                        "ajax":{
-                            url: "server-datatableGuard.php",
-                        }           
-                        });
-                    });
-            </script>
 </head>
 <body style="font-size: 20px;">
     <nav class="navbar navbar-default">
@@ -73,7 +53,6 @@
         </div>
     </nav>
 
-    <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default" style="margin-left:15px; margin-right:15px;">
                 <div class="panel-heading">
@@ -84,6 +63,7 @@
                     <ul class= "nav nav-tabs">
                         <li role="presentation" class="active"><a href="#guard_list" data-toggle="tab">Guard List</a></li>
                         <li role="presentation"><a href="#addguard" data-toggle="tab">Add Guard</a></li>
+                        <li role="presentation"><a href="#editguard" data-toggle="tab">Edit Guard</a></li>
                     </ul>
 
                     <div class="tab-content">
@@ -103,14 +83,42 @@
                                     <th>Check In Time</th>
                                     <th>Date</th>
                                     <th>Check Out Time</th>
-                                    <th>Remarks</th>
                                 </thead>
+                                <tbody>
+                                        <?php
+                                            $connection = mysql_connect("localhost", "root", "");
+
+                                            if(!$connection){
+                                                die('Could not connect :' . mysqli_error());
+                                            }
+                                            $db = mysql_select_db("dbregistration", $connection);
+                                            $query = mysql_query("select * from guard_list");
+                                            while($fetch = mysql_fetch_array($query)){
+                                                ?>
+                                                <tr>
+                                                
+                                                <td><p> <?php echo $fetch['name']; ?></p></td>
+                                                <td><p> <?php echo $fetch['guard_id']; ?></p></td>
+                                                <td><p> <?php echo $fetch['IC_No']; ?></p></td>
+                                                <td><p> <?php echo $fetch['gender']; ?></p></td>
+                                                <td><p> <?php echo $fetch['race']; ?></p></td>
+                                                <td><p> <?php echo $fetch['religion']; ?></p></td>
+                                                <td><p> <?php echo $fetch['address']; ?></p></td>
+                                                <td><p> <?php echo $fetch['contact_no']; ?></p></td>
+                                                <td><p> <?php echo $fetch['date1']; ?></p></td>
+                                                <td><p> <?php echo $fetch['check_in']; ?></p></td>
+                                                <td><p> <?php echo $fetch['date2']; ?></p></td>
+                                                <td><p> <?php echo $fetch['check_out']; ?></p></td>
+                                                
+                                                </tr>
+                                        <?php } ?>
+                                    </tbody>
                             </table>
                         </div>
-                    </div>
+                        </div>
 
                 <div class="tab-pane fade" id="addguard">
-                    <form id= "myform" role="form" action="guardadd.php" method="POST">
+                    <form id="myform" role="form" action="guardadd.php" method="POST">
                         <div class="row" style="margin-top: 20px;">
                             <div class="col-md-5">
                                 <div class="form-group">
@@ -202,15 +210,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <label>Remarks</label>
-                                                <input type="time" class="form-control" placeholder="Remarks">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-info btn-fill pull-right">Add</button>
+     
+                                    <button type="submit" name="addguard" class="btn btn-info btn-fill pull-right">Add</button>
 
                                     <button  style="margin-right:20px;"  type="button" id="loadkad" class="btn btn-info btn-fill pull-right">
                                             Load from MyKad
@@ -219,7 +220,7 @@
                         </form>
                     </div>
 
-                       <div class="tab-pane fade" id="edit">
+                       <div class="tab-pane fade" id="editguard">
                             <div class="panel-heading" style="text-align: center; font-size: 20px;">
                                 Click to Edit
                             </div>
@@ -239,7 +240,7 @@
                                             <th>Check In Time</th>
                                             <th>Date</th>
                                             <th>Check Out Time</th>
-                                            <th>Remarks</th>
+                           
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -267,7 +268,7 @@
                                                 <td><a id="check_in" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['check_in']; ?></a></td>
                                                 <td><a id="date2" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['date2']; ?></a></td>
                                                 <td><a id="check_out" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['check_out']; ?></a></td>
-                                                <td><a id="remarks" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['remarks']; ?></a></td>
+                                    
     
                                                 </tr>
                                         <?php } ?>
@@ -280,7 +281,7 @@
             </div>
             </div>
         </div>
-    </div>
+
 
 <script type="text/javascript">
         $("#loadkad").click(function(event){
@@ -320,61 +321,5 @@
         });
         </script>
 
-        <script src='js/jquery.validate.js'></script>
-
-        <script>
-        $("#myform").validate({
-
-            rules: {
-            Name: {
-                required: true
-            },
-
-            guard_id: {
-                required: true
-            },
-
-            IC_No: {
-                required: true,
-                number : true
-            },
-
-            gender :{
-                required: true
-            },
-
-            race :{
-                required: true
-            },
-
-            religion: {
-                required: true
-            },
-
-            address: {
-                required: true
-            },
-
-            contact_no:{
-                required: true
-            },
-
-            date1:{
-                required: true
-            },
-
-            check_in:{
-                required: true
-            }
-
-            date2:{
-                required: true
-            },
-
-
-        }
-
-        });
-        </script>
 </body>
 </html>
