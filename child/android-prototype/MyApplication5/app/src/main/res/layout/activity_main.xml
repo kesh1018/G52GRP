@@ -7,106 +7,265 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.yusha.myapplication.MainActivity">
+    tools:context="com.example.yusha.myapplication.MainActivity"
+    tools:showIn="@layout/app_bar_main">
 
-    <ScrollView
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/visitor_form"
-        android:fillViewport="false"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true">
+        android:layout_height="fill_parent"
+        android:longClickable="false"
+        android:layout_marginTop="40dp">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:id="@+id/visitor_form"
+            android:fillViewport="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true">
 
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/viewName"
-                android:text="Full Name:" />
 
-            <EditText
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/editName" />
+                android:layout_height="wrap_content">
 
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/viewID"
-                android:text="I/C Number:" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_gravity="right">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberSigned"
-                android:ems="10"
-                android:id="@+id/editID" />
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/viewInDate"
+                        android:text="Check-in Date"
+                        android:layout_gravity="bottom" />
 
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/viewAddress"
-                android:text="Address:" />
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/viewInTime"
+                        android:text="     Check-in Time"
+                        android:layout_gravity="bottom"
+                        android:gravity="end" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textMultiLine"
-                android:ems="10"
-                android:id="@+id/editAddress"
-                android:minLines="3" />
+                </LinearLayout>
 
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/viewRace"
-                android:text="Race:" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editRace" />
+                    <TextClock
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textDate"
+                        android:format="dd-MM-yyyy"
+                        android:text="z" />
 
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/viewRegNum"
-                android:text="Vehicle Registration Number:" />
+                    <TextClock
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textClock"
+                        android:format12Hour="          HH:mm:ss"
+                        android:gravity="end" />
+                </LinearLayout>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/editRegNum" />
+                <ImageView
+                    android:layout_width="136dp"
+                    android:layout_height="136dp"
+                    android:id="@+id/imageView"
+                    android:layout_gravity="right"
+                    android:src="#e4e4e4" />
 
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/viewPhoneNum"
-                android:text="Mobile Phone:" />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewName"
+                    android:text="Full Name:"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:ems="10"
-                android:id="@+id/editPhoneNum" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editName"
+                    android:autoText="false"
+                    android:clickable="false"
+                    android:contextClickable="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:cursorVisible="false" />
 
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Submit"
-                android:id="@+id/buttonSubmit"
-                android:layout_alignBottom="@+id/visitor_form"
-                android:layout_alignParentEnd="true" />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewID"
+                    android:text="I/C Number:"/>
 
-        </LinearLayout>
-    </ScrollView>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="10"
+                    android:id="@+id/editID"
+                    android:autoText="false"
+                    android:clickable="false"
+                    android:contextClickable="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:cursorVisible="false" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewGender"
+                    android:text="Gender:"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editGender"
+                    android:clickable="false"
+                    android:contextClickable="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:cursorVisible="false"
+                    />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewRace"
+                    android:text="Race:"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editRace"
+                    android:clickable="false"
+                    android:contextClickable="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:cursorVisible="false" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewAddress"
+                    android:text="Address:" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/editAddress"
+                    android:minLines="3"
+                    android:clickable="false"
+                    android:contextClickable="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:cursorVisible="false"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewRegNum"
+                    android:text="Vehicle Registration Number:" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editRegNum"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:capitalize="characters" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewContactNum"
+                    android:text="Contact Number:" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/editPhoneNum"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionDone" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewPersonVisit"
+                    android:text="Person to Visit:" />
+
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/editPersonVisit" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewReason"
+                    android:text="Reason to Visit:" />
+
+                <Spinner
+                    android:entries="@array/selectReason"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner"
+                    android:layout_below="@+id/textView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewRemarks"
+                    android:text="Remarks:" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ems="10"
+                    android:id="@+id/editRemarks"
+                    android:minLines="2" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:id="@+id/buttonSubmit"
+                    android:layout_alignBottom="@+id/visitor_form"
+                    android:layout_alignParentEnd="true" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="40px" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 
 </RelativeLayout>

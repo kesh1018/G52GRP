@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Visitor Management System</string>
+    <string name="app_name">VMS v0.8</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
@@ -14,4 +14,17 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="error_invalid_credentials">Invalid Email/Password. Please check again!</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_logout">Logout</string>
+    <string-array name="selectReason">
+        <item>Personal</item>
+        <item>Maintenance</item>
+        <item>Business</item>
+        <item>Emergency</item>
+    </string-array>
+
+
 </resources>
