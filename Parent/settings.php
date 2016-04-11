@@ -118,7 +118,7 @@
                         </div>
 
                 <div class="tab-pane fade" id="addguard">
-                    <form id="myform" role="form" action="guardadd.php" method="POST">
+                    <form id="guardform" role="form" action="guardadd.php" method="POST">
                         <div class="row" style="margin-top: 20px;">
                             <div class="col-md-5">
                                 <div class="form-group">
@@ -317,6 +317,57 @@
                     type: 'POST'
                 }
             });
+
+        });
+        </script>
+
+               <script src='js/jquery.validate.js'></script>
+
+        <script>
+        $("#guardform").validate({
+
+            rules: {
+            name: {
+                required: true
+            },
+            guard_id: {
+                required: true,
+                number : true
+            },
+
+            IC_No : {
+                required: true
+            },
+
+            gender :{
+                required: true
+            },
+
+            race: {
+                required: true
+            },
+
+            religion :{
+                required: true
+            },
+
+            address: {
+                required: true
+            },
+
+            contact_no :{
+                required: true
+            },
+
+            date1 :{
+                required: true
+            },
+
+            check_in :{
+                required: true
+            }
+
+        }
 
         });
         </script>
