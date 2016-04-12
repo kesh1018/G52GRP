@@ -49,6 +49,7 @@
 							alert("This visitor is Blacklisted for Security Reasons");
 							window.location.href="visitor.php";
 						</script>';
+				
 			}else{
 				$query = " INSERT INTO visitor_list (name, IC_No, dob, gender, address, race, religion, contact_no, registration_no, category, date, check_in, check_out, remarks, blacklist)
 				VALUES ('$name', '$IC_No', '$DOB','$gender', '$address', '$race','$religion', '$contact_num', '$registration_num', '$category', '$date', '$check_in', 'check_out', '$remarks', 'NO')";
@@ -58,5 +59,6 @@
 				header("location: visitor.php"); 
 			}
 			
-}
+	}
+
 ?>

@@ -77,29 +77,37 @@
 					History of Check Ins
 				</div>
 				<div class="panel-body">
-			<div class="table-responsive">
-				<table class="table table-striped table-bordered table-hover" id="example" width="100%" cellspacing="0">
-		        <thead>
-		            <tr>
-		                <th>Name</th>
-		                <th>IC No</th>
-		                <th>Date of Birth</th>
-		                <th>Gender</th>
-		                <th>Address</th>
-		                <th>Race</th>
-		                <th>Religion</th>
-		                <th>Contact Number</th>
-		                <th>Registration Number</th>
-		                <th>Category</th>
-		                <th>Date</th>
-		                <th>Check In Time</th>
-		                <th>Check Out Time</th>
-		                <th>Remarks</th>
-		                <th>Blacklist</th>
-		            </tr>
-		       	</thead>
-		   		</table>
-		   	</div>
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered table-hover" id="example" width="100%" cellspacing="0">
+				        <thead>
+				            <tr>
+				                <th>Name</th>
+				                <th>IC No</th>
+				                <th>Date of Birth</th>
+				                <th>Gender</th>
+				                <th>Address</th>
+				                <th>Race</th>
+				                <th>Religion</th>
+				                <th>Contact Number</th>
+				                <th>Registration Number</th>
+				                <th>Category</th>
+				                <th>Date</th>
+				                <th>Check In Time</th>
+				                <th>Check Out Time</th>
+				                <th>Remarks</th>
+				                <th>Blacklist</th>
+				            </tr>
+				       	</thead>
+				   		</table>
+				   	</div>
+				   	<form action="export.php" method="post" name="export_excel">
+		 
+					<div class="control-group">
+						<div class="controls">
+							<button type="submit" id="export" name="export" class="btn btn-info btn-fill" data-loading-text="Loading...">Export Data</button>
+						</div>
+					</div>
+					</form>
 		   		</div>
 			</div>
 		</div>
