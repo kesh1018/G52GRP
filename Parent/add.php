@@ -1,5 +1,6 @@
 <?php
-
+	
+	// Initialize connection
 	$connection = mysql_connect("localhost", "root", "");
 
 	if(!$connection){
@@ -8,9 +9,10 @@
 
 	$db = mysql_select_db("dbregistration", $connection);
 
-
+	// If add button is clicked
 	if (isset($_POST['add'])) {
 			
+			// Initialize variable
 		  	$name = $_POST['Name'];
 			$IC_No= $_POST['IC_No'];
 			$DOB = $_POST['DOB'];
@@ -26,7 +28,7 @@
 			$check_out = $_POST['check_out'];
 			$remarks = $_POST['remarks'];
 		
-
+			// Prevent MYSQL injection
 			$name = mysql_real_escape_string($name);
 			$IC_No = mysql_real_escape_string($IC_No);
 			$DOB = mysql_real_escape_string($DOB);
@@ -41,16 +43,19 @@
 			$check_in = mysql_real_escape_string($check_in);
 			$check_out = mysql_real_escape_string($check_out);
 			$remarks = mysql_real_escape_string($remarks);
-			
+
+			// Initialize query for blacklist
 			$query2 = mysql_query("SELECT * FROM visitor_list WHERE (name = '$name' OR IC_No = '$IC_No') AND blacklist = 'YES'");
 
-			if(mysql_num_rows($query2) != 0){
+			if(mysql_num_rows($query2) != 0){ //Echo blacklist
 				echo '<script language="javascript">
 							alert("This visitor is Blacklisted for Security Reasons");
 							window.location.href="visitor.php";
 						</script>';
 				
 			}else{
+
+				// Initialize query to insert data
 				$query = " INSERT INTO visitor_list (name, IC_No, dob, gender, address, race, religion, contact_no, registration_no, category, date, check_in, check_out, remarks, blacklist)
 				VALUES ('$name', '$IC_No', '$DOB','$gender', '$address', '$race','$religion', '$contact_num', '$registration_num', '$category', '$date', '$check_in', 'check_out', '$remarks', 'NO')";
 

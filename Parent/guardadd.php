@@ -1,5 +1,6 @@
 <?php
-
+	
+	// Initialize connection
 	$connection = mysql_connect("localhost", "root", "");
 
 	if(!$connection){
@@ -8,9 +9,11 @@
 
 	$db = mysql_select_db("dbregistration", $connection);
 
+	//If submit is clicked
 
 	if (isset($_POST['addguard'])) {
 			
+			// Initialize variable
 		  	$name = $_POST['name'];
 		  	$guard_id = $_POST['guard_id'];
 			$IC_No= $_POST['IC_No'];
@@ -24,7 +27,7 @@
 			$date2 = $_POST['date2'];
 			$check_out = $_POST['check_out'];
 		
-		
+			// Prevent MYSQL injection
 			$name = mysql_real_escape_string($name);
 			$guard_id = mysql_real_escape_string($guard_id);
 			$IC_No = mysql_real_escape_string($IC_No);
@@ -38,7 +41,7 @@
 			$date2 = mysql_real_escape_string($date2);
 			$check_out = mysql_real_escape_string($check_out);
 
-			
+			// Initialize query
 			$query3 = " INSERT INTO guard_list (name, guard_id, IC_No, gender, race, religion, address, contact_no, date1, check_in, date2, check_out)
 			VALUES ('$name', '$guard_id', '$IC_No', '$gender', '$race','$religion', '$address', '$contact_no', '$date1', '$check_in', '$date2', '$check_out')";
 
@@ -46,5 +49,5 @@
 			mysql_close($connection);
 			
 	}
-	header("location: settings.php");
+	header("location: settings.php"); // Redirect
 ?>

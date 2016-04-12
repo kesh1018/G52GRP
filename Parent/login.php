@@ -2,11 +2,12 @@
 
 session_start(); // Starting Session
 
+// Intialize variables
 $error='';
 $email='';
 $password=''; // Variable To Store Error Message
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) { //if submit is pressed
 
 	if (empty($_POST['user_email']) || empty($_POST['user_password'])) {
 		$error = "Email or Password can't be empty.";

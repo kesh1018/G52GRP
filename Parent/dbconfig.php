@@ -1,15 +1,13 @@
 <?php
-
+	
+	// Intialize Database
 	$db_host = "localhost";
 	$db_name = "dbregistration";
 	$db_user = "root";
 	$db_pass = "";
-		
+	
+	// Initalize connection		
 	$conn = mysql_connect($db_host,$db_user,$db_pass);
-
-	if($conn){
-		echo "helo";
-	}
 
 	if(!$conn){
 		die('Connection Failed'.mysql_error());

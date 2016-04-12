@@ -2,12 +2,14 @@
 	
 	$connection = mysql_connect("localhost", "root", "");
 
+	// Initialize connection
 	if(!$connection){
 		die('Could not connect :' . mysqli_error());
 	}
 
 	$db = mysql_select_db("dbregistration", $connection);
 
+	// Initialize query
 	$query = "select * from visitor_list";	
 	 function cleanData(&$str)
   {

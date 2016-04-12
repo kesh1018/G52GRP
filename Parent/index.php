@@ -10,10 +10,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Imports -->
 	<title>Visitor Management System Dashboard</title>
 	<link href="css/login.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	<!-- Initialize lockscreen  -->
 	<div class="wrapper">
 		<div class="container">
 			<h1>Visitor Management System Dashboard</h1>
@@ -45,6 +47,7 @@
 	<script src='js/index.js'></script> 
 	<script src='js/jquery.validate.js'></script>
 
+	<!-- Initialize validation  -->
 	<script>
 	$("#loginform").validate({
 

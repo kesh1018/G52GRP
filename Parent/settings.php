@@ -5,6 +5,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+    <!-- Imports -->
     <meta charset="utf-8" />
     <title>Visitor Management System Dashboard</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -16,6 +18,7 @@
 
 </head>
 <body style="font-size: 20px;">
+<!-- Initialize navigation  -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -54,7 +57,7 @@
     </nav>
 
     <?php if ($_SESSION['login_user']=="admin@vms.com"){ ?>
-  
+        <!-- If  login as user  -->
         <div class="col-lg-12">
             <div class="panel panel-default" style="margin-left:15px; margin-right:15px;">
                 <div class="panel-heading">
@@ -87,6 +90,7 @@
                                     <th>Check Out Time</th>
                                 </thead>
                                 <tbody>
+                                    <!-- Initialize table  -->
                                         <?php
                                             $connection = mysql_connect("localhost", "root", "");
 
@@ -296,6 +300,7 @@
         </div>
     <?php } ?>
 
+<!-- Initialize card reader API  -->
 <script type="text/javascript">
         $("#loadkad").click(function(event){
              try {
@@ -319,7 +324,7 @@
             }
         });
         </script>
-        <script type="text/javascript">
+        <script type="text/javascript"> // Make tables editable
         $(document).ready(function() {
             $.fn.editable.defaults.mode = 'popup';     
             //make editable

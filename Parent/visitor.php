@@ -5,6 +5,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <!-- Imports -->
 	<meta charset="utf-8" />
 	<title>Visitor Management System Dashboard</title>
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -15,7 +16,7 @@
     <script src="js/bootstrap-editable.min.js"></script>
 </head>
 <body style="font-size: 20px;">
-
+    <!-- Initialize navigation  -->
 	<nav class="navbar navbar-default ">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -50,6 +51,7 @@
 		</div>
 	</nav>
 
+        <!-- Initialize add visitor  -->
 		<div class="col-lg-12" >
 			<div class="panel panel-default" style="margin-left:15px; margin-right:15px;">
 				<div class="panel-heading" style="text-align: center;">

@@ -5,6 +5,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<!-- Imports -->
 	<meta charset="utf-8" />
 	<title>Visitor Management System Dashboard</title>
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -15,7 +16,7 @@
 	<script type="text/javascript" language="javascript" src="js/time.js" ></script>
 			<script type="text/javascript" language="javascript">
 				 $(document).ready(function(){
-					var dataTable =$('#example').dataTable({
+					var dataTable =$('#example').dataTable({ // Intialize datatable
 						"serverSide": true,
 						"processing": true,
 						"responsive": true,
@@ -32,6 +33,8 @@
 			</script>
 </head>
 <body style="font-size: 20px;">
+
+	<!-- Initialize navigation  -->
 	<nav class="navbar navbar-default navbar-fixed">
 		<div class="container-fluid">
 			<div class="navbar-header">
@@ -48,7 +51,8 @@
 	      	<li><div id="clockbox" style="margin-top: 12px;"></div></li>
 	      		<h3 class="navbar-text" style="font-size: 20px;" >Signed in as <?php echo $login_session; ?></h3>
 	      	<li><a href="settings.php">Settings</a></li>
-	        	        <!-- Modal -->
+
+	       	<!-- Modal -->
 	        <li><div class="modal fade" id="logout" role="dialog">
 				<div class="modal-dialog modal-sm">
 					<div class="modal-content">
@@ -77,7 +81,7 @@
 					History of Check Ins
 				</div>
 				<div class="panel-body">
-					<div class="table-responsive">
+					<div class="table-responsive"> <!-- Initialize table  -->
 						<table class="table table-striped table-bordered table-hover" id="example" width="100%" cellspacing="0">
 				        <thead>
 				            <tr>
