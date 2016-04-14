@@ -102,15 +102,16 @@
 				            <tr>
 				                <th>Name</th>
 				                <th>IC No</th>
-				                <th>DOB</th>
+				                <th>Date of Birth</th>
 				                <th>Gender</th>
 				                <th>Address</th>
 				                <th>Race</th>
 				                <th>Religion</th>
 				                <th>Contact Number</th>
+				                <th>Vehicle Type</th>
 				                <th>Registration Number</th>
-				                <th>Category</th>
 				                <th>Date</th>
+				                <th>Category</th>
 				                <th>Check In Time</th>
 				                <th>Check Out Time</th>
 				                <th>Remarks</th>

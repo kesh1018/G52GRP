@@ -24,13 +24,14 @@ $columns = array(
     5 => 'race',
     6 => 'religion',
     7 => 'contact_no',
-    8 => 'registration_no',
-    9 => 'category',
+    8 => 'vehicle_type',
+    9 => 'registration_no',
     10 => 'date',
-    11 => 'check_in',
-    12 => 'check_out',
-    13 => 'remarks',
-    14 => 'blacklist'
+    11 => 'category',  
+    12 => 'check_in',
+    13 => 'check_out',
+    14 => 'remarks',
+    15 => 'blacklist'
 
 
 );
@@ -55,9 +56,10 @@ if( !empty($requestData['search']['value']) ) {
     $sql.=" OR race LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR religion LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR contact_no LIKE '".$requestData['search']['value']."%' ";
+    $sql.=" OR vehicle_type LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR registration_no LIKE '".$requestData['search']['value']."%' ";
-    $sql.=" OR category LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR DATE LIKE '".$requestData['search']['value']."%' ";
+    $sql.=" OR category LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR check_in LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR check_out LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR remarks LIKE '".$requestData['search']['value']."%' ";
@@ -90,9 +92,10 @@ while( $row=mysqli_fetch_array($query) ) {  // preparing an array
     $nestedData[] = $row["race"];
     $nestedData[] = $row["religion"];
     $nestedData[] = $row["contact_no"];
+    $nestedData[] = $row["vehicle_type"];
     $nestedData[] = $row["registration_no"];
-    $nestedData[] = $row["category"];
     $nestedData[] = $row["date"];
+    $nestedData[] = $row["category"];
     $nestedData[] = $row["check_in"];
     $nestedData[] = $row["check_out"];
     $nestedData[] = $row["remarks"];
