@@ -177,10 +177,10 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="category">Category</label>
-                                                        <select class="form-control" id="category">
+                                                        <select class="form-control" name="category">
                                                             <option>Visitor</option>
                                                             <option>Delivery</option>
-                                                            <option>Constructor</option>
+                                                            <option>Contractor</option>
                                                             <option>Others</option>
                                                         </select>
                                                 </div>
