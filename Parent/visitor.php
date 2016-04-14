@@ -68,6 +68,22 @@
     				<div class="tab-content">
     					<div class="tab-pane fade in active" id="add">
     						<form id="myform" role="form" action="add.php" method="POST">
+                                    <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label> Picture </label>
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <a id="show_pic">
+                                                            <img width="150px" height="200px" class="media-object" src="">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
         							<div class="row" style="margin-top: 20px;">
                                         <div class="col-md-5">
                                             <div class="form-group">
@@ -83,6 +99,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    
 
                                         <div class="row">
                                             <div class="col-md-5">
@@ -193,7 +210,7 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>IC No</th>
-                                            <th>Date of Birth</th>
+                                            <th>DOB</th>
                                             <th>Gender</th>
                                             <th>Religion</th>
                                             <th>Race</th>
@@ -299,7 +316,11 @@
                     document.forms[0].gender.value = obj.getGender();
                     document.forms[0].race.value = obj.getRace();
                     document.forms[0].address.value = obj.getAddress();
-
+                    strRet=obj.getPhoto("C:\\myphotov1.jpg");
+                    //load image
+                    var file_location = document.getElementById('show_pic');
+                    file_location.innerHTML='<img src="C:\\myphotov1.jpg"></img>';
+                    
                     obj.EndJPN();
                 }
                 else {

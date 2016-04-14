@@ -87,7 +87,7 @@
 				            <tr>
 				                <th>Name</th>
 				                <th>IC No</th>
-				                <th>Date of Birth</th>
+				                <th>DOB</th>
 				                <th>Gender</th>
 				                <th>Address</th>
 				                <th>Race</th>

@@ -125,6 +125,22 @@
 
                 <div class="tab-pane fade" id="addguard">
                     <form id="guardform" role="form" action="guardadd.php" method="POST">
+                        <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label> Picture </label>
+                                    <div class="media">
+                                        <div class="media-body">
+                                            <a id="show_pic">
+                                                <img width="150px" height="200px" class="media-object" src="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="row" style="margin-top: 20px;">
                             <div class="col-md-5">
                                 <div class="form-group">
@@ -308,11 +324,15 @@
                 var strRet = obj.BeginJPN("FT SCR2000 0");
                 if (strRet == "0") {
                     document.forms[0].IC_No.value = obj.getIDNum();
-                    document.forms[0].Name.value = obj.getGMPCName();
+                    document.forms[0].name.value = obj.getGMPCName();
                     document.forms[0].religion.value = obj.getReligion();
                     document.forms[0].gender.value = obj.getGender();
                     document.forms[0].race.value = obj.getRace();
                     document.forms[0].address.value = obj.getAddress();
+                    strRet=obj.getPhoto("C:\\myphotov1.jpg");
+                    //load image
+                    var file_location = document.getElementById('show_pic');
+                    file_location.innerHTML='<img src="C:\\myphotov1.jpg"></img>';
 
                     obj.EndJPN();
                 }
