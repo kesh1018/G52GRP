@@ -141,13 +141,25 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-md-5">
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label>Contact Number</label>
                                                     <input type="text" class="form-control" placeholder="Contact Number" name="contact_num" >
                                                 </div>
                                             </div>
-                                            <div class="col-md-5">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label for="vehicle_type">Vehicle Type</label>
+                                                    <select class="form-control" id="vehicle_type">
+                                                        <option>Car</option>
+                                                        <option>Motorcycle</option>
+                                                        <option>Van</option>
+                                                        <option>Lorry</option>
+                                                        <option>Others</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label>Registration Number</label>
                                                     <input type="text" class="form-control" placeholder="Registration Number" name="registration_num">
@@ -158,14 +170,25 @@
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label>Category</label>
-                                                    <input type="text" class="form-control" placeholder="Category" name="category" >
+                                                    <label>Date</label>
+                                                    <input type="text" class="form-control" placeholder="Date" name="date">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label>Date</label>
-                                                    <input type="text" class="form-control" placeholder="Date" name="date">
+                                                    <label for="category">Category</label>
+                                                        <select class="form-control" id="category">
+                                                            <option>Visitor</option>
+                                                            <option>Delivery</option>
+                                                            <option>Constructor</option>
+                                                            <option>Others</option>
+                                                        </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Entry Pass Number</label>
+                                                    <input type="text" class="form-control" placeholder="Entry Pass Number" name="entrypass_num">
                                                 </div>
                                             </div>
                                         </div>
@@ -210,15 +233,16 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>IC No</th>
-                                            <th>DOB</th>
+                                            <th>Date of Birth</th>
                                             <th>Gender</th>
-                                            <th>Religion</th>
-                                            <th>Race</th>
                                             <th>Address</th>
+                                            <th>Race</th>
+                                            <th>Religion</th>
                                             <th>Contact Number</th>
+                                            <th>Vehicle Type</th>
                                             <th>Registration Number</th>
-                                            <th>Category</th>
                                             <th>Date</th>
+                                            <th>Category</th>
                                             <th>Check In Time</th>
                                             <th>Check Out Time</th>
                                             <th>Remarks</th>
