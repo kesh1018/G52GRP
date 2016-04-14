@@ -233,7 +233,7 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>IC No</th>
-                                            <th>Date of Birth</th>
+                                            <th>DOB</th>
                                             <th>Gender</th>
                                             <th>Address</th>
                                             <th>Race</th>
@@ -266,13 +266,14 @@
                                                 <td><p id="IC_No" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['IC_No']; ?></p></td>
                                                 <td><p id="dob" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['dob']; ?></p></td>
                                                 <td><p id="gender" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['gender']; ?></p></td>
+                                                <td><p id="address" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['address']; ?></p></td>
                                                 <td><p id="race" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['race']; ?></p></td>
                                                 <td><p id="religion" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['religion']; ?></p></td>
-                                                <td><a id="address" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['address']; ?></a></td>
                                                 <td><a id="contact_no" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['contact_no']; ?></a></td>
+                                                <td><a id="vehicle_type" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['vehicle_type']; ?></a></td>
                                                 <td><a id="registration_no" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['registration_no']; ?></a></td>
-                                                <td><a id="category" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['category']; ?></a></td>
                                                 <td><a id="date" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['date']; ?></a></td>
+                                                <td><a id="category" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['category']; ?></a></td>
                                                 <td><a id="check_in" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['check_in']; ?></a></td>
                                                 <td><a id="check_out" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['check_out']; ?></a></td>
                                                 <td><a id="remarks" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['remarks']; ?></a></td>

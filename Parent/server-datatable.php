@@ -19,8 +19,8 @@ $columns = array(
     0 => 'name', 
     1 => 'IC_No',
     2 => 'dob',
-    3 => 'address',
-    4 => 'gender',
+    3 => 'gender',
+    4 => 'address',
     5 => 'race',
     6 => 'religion',
     7 => 'contact_no',
@@ -31,7 +31,7 @@ $columns = array(
     12 => 'check_in',
     13 => 'check_out',
     14 => 'remarks',
-    15 => 'blacklist'
+    15 => 'blacklist',
 
 
 );
@@ -51,14 +51,14 @@ if( !empty($requestData['search']['value']) ) {
     $sql.=" WHERE name LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR IC_No LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR dob LIKE '".$requestData['search']['value']."%' ";
-    $sql.=" OR address LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR gender LIKE '".$requestData['search']['value']."%' ";
+    $sql.=" OR address LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR race LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR religion LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR contact_no LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR vehicle_type LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR registration_no LIKE '".$requestData['search']['value']."%' ";
-    $sql.=" OR DATE LIKE '".$requestData['search']['value']."%' ";
+    $sql.=" OR date LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR category LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR check_in LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR check_out LIKE '".$requestData['search']['value']."%' ";

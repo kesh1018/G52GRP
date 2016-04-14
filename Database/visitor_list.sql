@@ -20,7 +20,7 @@ category	varchar(15) NOT NULL,
 check_in	time(6) NOT NULL,
 check_out	time(6) NOT NULL,
 remarks   	varchar (1000) NOT NULL,
-blacklist  	varchar (255),
+blacklist  	varchar (255) NOT NULL,
 
 PRIMARY KEY(ID)
 );

@@ -38,6 +38,7 @@
 						null,
 						null,
 						null,
+						null
 						],
 						"pagingType": "full_numbers",
 						"ajax":{
@@ -102,7 +103,7 @@
 				            <tr>
 				                <th>Name</th>
 				                <th>IC No</th>
-				                <th>Date of Birth</th>
+				                <th>DOB</th>
 				                <th>Gender</th>
 				                <th>Address</th>
 				                <th>Race</th>
@@ -115,7 +116,7 @@
 				                <th>Check In Time</th>
 				                <th>Check Out Time</th>
 				                <th>Remarks</th>
-				                <th>Blacklist</th>
+				               	<th>Blacklist</th>
 				            </tr>
 				       	</thead>
 				   		</table>
