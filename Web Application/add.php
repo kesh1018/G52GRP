@@ -21,6 +21,7 @@
 			$race = $_POST['race'];
 			$religion = $_POST['religion'];
 			$contact_num = $_POST['contact_num'];
+			$vehicle_type = $_POST['vehicle_type'];
 			$registration_num = $_POST['registration_num'];
 			$date = $_POST['date'];
 			$category = $_POST['category'];
@@ -38,6 +39,7 @@
 			$race = mysql_real_escape_string($race);
 			$religion = mysql_real_escape_string($religion);
 			$contact_num = mysql_real_escape_string($contact_num);
+			$vehicle_type = mysql_real_escape_string($vehicle_type);
 			$registration_num = mysql_real_escape_string($registration_num);
 			$date = mysql_real_escape_string($date);
 			$category = mysql_real_escape_string($category);
@@ -60,8 +62,8 @@
 			}else{
 
 				// Initialize query to insert data
-				$query = " INSERT INTO visitor_list (name, IC_No, dob, gender, address, race, religion, contact_no, vehicle_type, registration_no, date, category, check_in, check_out, remarks, blacklist)
-				VALUES ('$name', '$IC_No', '$DOB','$gender', '$address', '$race','$religion', '$contact_num', '$registration_num', '$date', '$category', '$entrypass_num' , '$check_in', 'check_out', '$remarks', 'NO')";
+				$query = " INSERT INTO visitor_list (name, IC_No, dob, gender, address, race, religion, contact_no, vehicle_type, registration_no, date, category, entrypass_num, check_in, check_out, remarks, blacklist)
+				VALUES ('$name', '$IC_No', '$DOB','$gender', '$address', '$race','$religion', '$contact_num', '$vehicle_type', '$registration_num', '$date', '$category', '$entrypass_num' , '$check_in', 'check_out', '$remarks', 'NO')";
 
 
 				mysql_query($query);

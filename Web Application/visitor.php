@@ -150,7 +150,7 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="vehicle_type">Vehicle Type</label>
-                                                    <select class="form-control" id="vehicle_type">
+                                                    <select class="form-control" name="vehicle_type">
                                                         <option>Car</option>
                                                         <option>Motorcycle</option>
                                                         <option>Van</option>
@@ -243,6 +243,7 @@
                                             <th>Registration Number</th>
                                             <th>Date</th>
                                             <th>Category</th>
+                                            <th>Entrypass Number</th>
                                             <th>Check In Time</th>
                                             <th>Check Out Time</th>
                                             <th>Remarks</th>
@@ -274,6 +275,7 @@
                                                 <td><a id="registration_no" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['registration_no']; ?></a></td>
                                                 <td><a id="date" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['date']; ?></a></td>
                                                 <td><a id="category" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['category']; ?></a></td>
+                                                <td><a id="entrypass_num" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['entrypass_num']; ?></a></td>
                                                 <td><a id="check_in" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['check_in']; ?></a></td>
                                                 <td><a id="check_out" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['check_out']; ?></a></td>
                                                 <td><a id="remarks" href="#" data-type="text" data-pk=" <?php echo $fetch['ID']; ?>"> <?php echo $fetch['remarks']; ?></a></td>
@@ -371,7 +373,7 @@
         });
         </script>
 
-        <script src='js/jquery.validate.js'></script>
+        <!-- <script src='js/jquery.validate.js'></script>
 
         <script>
         $("#myform").validate({
@@ -428,6 +430,6 @@
         }
 
         });
-        </script> 
+        </script> --> 
 </body>
 </html>

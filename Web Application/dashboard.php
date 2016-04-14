@@ -38,6 +38,7 @@
 						null,
 						null,
 						null,
+						null,
 						null
 						],
 						"pagingType": "full_numbers",
@@ -113,6 +114,7 @@
 				                <th>Registration Number</th>
 				                <th>Date</th>
 				                <th>Category</th>
+				                <th>Entrypass Number</th>
 				                <th>Check In Time</th>
 				                <th>Check Out Time</th>
 				                <th>Remarks</th>

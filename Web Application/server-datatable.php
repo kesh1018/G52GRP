@@ -28,11 +28,11 @@ $columns = array(
     9 => 'registration_no',
     10 => 'date',
     11 => 'category',  
-    12 => 'check_in',
-    13 => 'check_out',
-    14 => 'remarks',
-    15 => 'blacklist',
-
+    12 => 'entrypass_num',
+    13 => 'check_in',
+    14 => 'check_out',
+    15 => 'remarks',
+    16 => 'blacklist',
 
 );
 
@@ -60,6 +60,7 @@ if( !empty($requestData['search']['value']) ) {
     $sql.=" OR registration_no LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR date LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR category LIKE '".$requestData['search']['value']."%' ";
+    $sql.=" OR entrypass_num LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR check_in LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR check_out LIKE '".$requestData['search']['value']."%' ";
     $sql.=" OR remarks LIKE '".$requestData['search']['value']."%' ";
@@ -96,6 +97,7 @@ while( $row=mysqli_fetch_array($query) ) {  // preparing an array
     $nestedData[] = $row["registration_no"];
     $nestedData[] = $row["date"];
     $nestedData[] = $row["category"];
+    $nestedData[] = $row["entrypass_num"];
     $nestedData[] = $row["check_in"];
     $nestedData[] = $row["check_out"];
     $nestedData[] = $row["remarks"];
