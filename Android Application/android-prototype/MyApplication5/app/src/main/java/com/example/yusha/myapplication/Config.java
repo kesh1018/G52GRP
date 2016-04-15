@@ -5,6 +5,7 @@ package com.example.yusha.myapplication;
  */
 public class Config {
     public static final String DATA_URL = "http://10.0.2.2/login-app/fetchData.php";
+    public static final String INSERT_URL= "http://10.0.2.2/login-app/insertData.php";
     public static final String KEY_NAME = "name";
     public static final String KEY_IC_NO = "IC_No";
     public static final String KEY_DOB = "dob";
@@ -13,6 +14,7 @@ public class Config {
     public static final String KEY_RACE = "race";
     public static final String KEY_RELIGION = "religion";
     public static final String KEY_CONTACT_NO = "contact_no";
+    public static final String KEY_VEHICLE_TYPE = "vehicle type";
     public static final String KEY_REGISTRATION_NO = "registration_no";
     public static final String KEY_CATEGORY = "category";
     public static final String KEY_DATE = "date";

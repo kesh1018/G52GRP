@@ -34,23 +34,8 @@
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="44dp"
+                    android:layout_height="28dp"
                     android:layout_gravity="right">
-
-                    <android.support.v7.widget.AppCompatTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/viewInDate"
-                        android:text="Check-in Date"
-                        android:layout_gravity="bottom" />
-
-                    <android.support.v7.widget.AppCompatTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/viewInTime"
-                        android:text="     Check-in Time"
-                        android:layout_gravity="bottom"
-                        android:gravity="end" />
 
                 </LinearLayout>
 
@@ -59,27 +44,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <TextClock
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textDate"
-                        android:format="dd-MM-yyyy"
-                        android:text="z" />
-
-                    <TextClock
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textClock"
-                        android:format12Hour="          HH:mm:ss"
-                        android:gravity="end" />
                 </LinearLayout>
-
-                <ImageView
-                    android:layout_width="136dp"
-                    android:layout_height="136dp"
-                    android:id="@+id/imageView"
-                    android:layout_gravity="right"
-                    android:src="#e4e4e4" />
 
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="wrap_content"
@@ -118,6 +83,23 @@
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/viewDOB"
+                    android:text="Date of Birth:"/>
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberSigned"
+                    android:ems="10"
+                    android:id="@+id/editDOB"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:cursorVisible="false" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/viewGender"
                     android:text="Gender:"/>
 
@@ -125,24 +107,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/editGender"
-                    android:clickable="false"
-                    android:contextClickable="false"
-                    android:editable="false"
-                    android:focusable="false"
-                    android:focusableInTouchMode="false"
-                    android:cursorVisible="false"
-                    />
-
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/viewRace"
-                    android:text="Race:"/>
-
-                <android.support.design.widget.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/editRace"
                     android:clickable="false"
                     android:contextClickable="false"
                     android:editable="false"
@@ -171,18 +135,36 @@
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/viewRegNum"
-                    android:text="Vehicle Registration Number:" />
+                    android:id="@+id/viewRace"
+                    android:text="Race:"/>
 
-                <EditText
+                <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editRegNum"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    android:imeOptions="actionNext"
-                    android:inputType="text"
-                    android:capitalize="characters" />
+                    android:id="@+id/editRace"
+                    android:clickable="false"
+                    android:contextClickable="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:cursorVisible="false" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewReligion"
+                    android:text="Religion:"/>
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editReligion"
+                    android:clickable="false"
+                    android:contextClickable="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:cursorVisible="false" />
 
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="wrap_content"
@@ -190,7 +172,7 @@
                     android:id="@+id/viewContactNum"
                     android:text="Contact Number:" />
 
-                <EditText
+                <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="phone"
@@ -203,22 +185,54 @@
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/viewPersonVisit"
-                    android:text="Person to Visit:" />
+                    android:id="@+id/viewVehicleType"
+                    android:text="Vehicle Type:" />
 
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editVehicleType"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
 
-                <EditText
+                <android.support.v7.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:id="@+id/viewRegNum"
+                    android:text="Vehicle Registration Number:" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editRegNum"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewDate"
+                    android:text="Date:" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
                     android:ems="10"
-                    android:id="@+id/editPersonVisit" />
+                    android:id="@+id/editDate"
+                    android:clickable="false"
+                    android:focusable="false"/>
+
 
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/viewReason"
-                    android:text="Reason to Visit:" />
+                    android:text="Category:" />
 
                 <Spinner
                     android:entries="@array/selectReason"
@@ -232,10 +246,41 @@
                 <android.support.v7.widget.AppCompatTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/viewEntryPass"
+                    android:text="Entry Pass:" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editEntryPass"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="text" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/viewCheckIn"
+                    android:text="Check-In Time:"
+                    />
+
+                <android.support.design.widget.TextInputEditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    android:ems="10"
+                    android:id="@+id/editCheckInTime"
+                    android:clickable="false"
+                    android:focusable="false"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/viewRemarks"
                     android:text="Remarks:" />
 
-                <EditText
+                <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textMultiLine"
@@ -250,7 +295,8 @@
                     android:text="Submit"
                     android:id="@+id/buttonSubmit"
                     android:layout_alignBottom="@+id/visitor_form"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentEnd="true"
+                    android:onClick="onClick" />
 
                 <Space
                     android:layout_width="match_parent"
